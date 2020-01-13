@@ -1,0 +1,36 @@
+{
+  "android": {
+    "appName": "SimplifyRNStarterKit",
+    "applicationId": "com.duyanhv.simplifystaterkit",
+    "codePush": {
+      "productionKey": "",
+      "stagingKey": ""
+    },
+    "storeLink": "market://details?id=com.google.android.apps.playconsole",
+    "version": "0.0.1",
+    "versionCode": 3145801
+  },
+  "author": "Duy Anh Vu",
+  "dateFormat": "DD/MM/YYYY",
+  "fb": {
+    "id": ""
+  },
+  "i18n": {
+    "defaultLang": "en",
+    "en": "en",
+    "vn": "vn"
+  },
+  "ios": {
+    "appName": "SimplifyRNStarterKit",
+    "build": 3145801,
+    "bundleId": "com.duyanhv.simplifystaterkit",
+    "codePush": {
+      "productionKey": "",
+      "stagingKey": ""
+    },
+    "storeLink": "itms-apps://apps.apple.com/app/testflight/id899247664",
+    "version": "0.0.1"
+  },
+  "sentryDns": "https://246841872c224fd8bcfca9a0f7396cd4@sentry.io/1878997",
+  "signInOptions": ["email", "phone", "facebook", "google"]
+}

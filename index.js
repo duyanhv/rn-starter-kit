@@ -1,0 +1,4 @@
+/**
+ * @format
+ */
+import './src/bootstrap';

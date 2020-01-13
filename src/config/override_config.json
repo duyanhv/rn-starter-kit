@@ -1,0 +1,22 @@
+{
+  "android": {
+    "appName": "Simplify RN Stater Kit",
+    "applicationId": "com.duyanhv.simplifystaterkit",
+    "codePush": {
+      "productionKey": "",
+      "stagingKey": ""
+    }
+  },
+  "fb": {
+    "id": ""
+  },
+  "ios": {
+    "appName": "React Native Starter Kit",
+    "bundleId": "com.duyanhv.simplifystaterkit",
+    "codePush": {
+      "productionKey": "",
+      "stagingKey": ""
+    }
+  },
+  "sentryDns": ""
+}

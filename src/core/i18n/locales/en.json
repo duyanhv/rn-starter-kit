@@ -1,0 +1,135 @@
+{
+  "changePasswordScreen": {
+    "changePassword": "Change Password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordDoesNotMatch": "Confirm Password does not match",
+    "password": "Password",
+    "passwordChanged": "Password has been changed",
+    "requireRecentLogin": "This operation is sensitive and requires recent authentication. Log in again before retrying this request"
+  },
+  "color": {
+    "blue": "Blue",
+    "deepPurple": "Deep Purple",
+    "indigo": "Indigo",
+    "lightBlue": "Light Blue",
+    "pink": "Pink",
+    "purple": "Purple",
+    "red": "Red"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "close": "Close",
+    "confirm": "Confirm",
+    "home": "Home",
+    "newUpdate": "New Update",
+    "newVersionInAppStore": "New version is available in App Store",
+    "newVersionInPlayStore": "New version is available in Play Store",
+    "ok": "OK",
+    "passwordInfo": "Password must be at least 6 characters and must include at least one upper case letter, one lower case letter, one numeric digit and one special letter (!, @, #, $, %, ^, &, *)",
+    "select": "Select",
+    "settings": "Settings",
+    "update": "Update",
+    "updateInstalled": "A new update arrived. Please restart the app"
+  },
+  "dialog": {
+    "close": "Close",
+    "error": "Error",
+    "info": "Info",
+    "success": "Success",
+    "warning": "Warning"
+  },
+  "emailLoginScreen": {
+    "email": "Email",
+    "forgotPassword": "Forgot Password?",
+    "login": "Login",
+    "password": "Password",
+    "userDisabled": "User is disabled",
+    "wrongEmailOrPassword": "Email or password is incorrect"
+  },
+  "emailRegisterScreen": {
+    "accountHasBeenCreated": "Account has been created",
+    "back": "Back",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordDoesNotMatch": "Confirm Password does not match",
+    "email": "Email",
+    "emailHasBeenAlreadyRegistered": "Email has been already registered",
+    "password": "Password",
+    "register": "Register"
+  },
+  "emailVerificationScreen": {
+    "check": "Check",
+    "emailNotVerified": "Your email is not verified yet",
+    "notice": "Your email {{email}} is not verified. Please check the your mailbox, verify it then click Check button below.",
+    "openMailbox": "Open Mailbox",
+    "resendEmailNotification": "Verification email is resent. Please check your mailbox",
+    "resendVerification": "Resend verification email",
+    "useAnotherAccount": "User another account",
+    "verifyEmail": "Verify Email"
+  },
+  "error": {
+    "invalid": "{{field}} is invalid",
+    "required": "{{field}} is required",
+    "somethingWentWrong": "Something went wrong",
+    "unexpectedErrorOccurred": "Unexpected error occurred",
+    "unexpectedErrorOccurredMessage": "We have reported this to our team! Please close the app and start again!"
+  },
+  "forgotPasswordScreen": {
+    "email": "Email",
+    "forgotPassword": "Forgot Password",
+    "passwordResetEmailSent": "Password reset email has been sent",
+    "sendPasswordResetEmail": "Send Password Reset Email",
+    "userNotFound": "User Not Found"
+  },
+  "home": {
+    "hello": "Hello"
+  },
+  "loginScreen": {
+    "loginWith": "Login with",
+    "loginWithEmail": "Login with email",
+    "loginWithPhoneNo": "Login with phone no",
+    "notHaveAccount": "Don't Have an Account?",
+    "registerByEmail": "Register by email",
+    "registerByPhoneNo": "Register by phone no"
+  },
+  "month": {
+    "april": "April",
+    "august": "August",
+    "december": "December",
+    "february": "February",
+    "january": "January",
+    "july": "July",
+    "june": "June",
+    "march": "March",
+    "may": "May",
+    "november": "November",
+    "october": "October",
+    "september": "September"
+  },
+  "phoneNoLoginScreen": {
+    "countryCode": "Country code",
+    "invalidVerificationCode": "Invalid verification code",
+    "login": "Login",
+    "phoneNo": "Phone No",
+    "resendCode": "Resend code",
+    "sendVerificationCode": "Send Verification Code",
+    "tooManyRequests": "We have blocked all requests from this device due to unusual activity. Try again later",
+    "userDisabled": "User is disabled",
+    "verificationCode": "Verification Code",
+    "verify": "Verify"
+  },
+  "settingsScreen": {
+    "about": "About",
+    "author": "Author",
+    "changePassword": "Change password",
+    "language": "Language",
+    "logout": "Logout",
+    "primaryColor": "Primary color",
+    "settings": "Settings",
+    "theme": "Theme",
+    "version": "Version"
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light"
+  }
+}

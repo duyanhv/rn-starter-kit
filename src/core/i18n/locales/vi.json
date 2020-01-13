@@ -1,0 +1,135 @@
+{
+  "changePasswordScreen": {
+    "changePassword": "Đổi mật khẩu",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "confirmPasswordDoesNotMatch": "Xác nhận mật khẩu không trùng khớp",
+    "password": "Mật khẩu",
+    "passwordChanged": "Mật khẩu đã thay đổi",
+    "requireRecentLogin": "Thao tác này yêu cầu đăng nhập lại. Vui lòng đăng nhập lại và thử lại"
+  },
+  "color": {
+    "blue": "Xanh da trời",
+    "deepPurple": "Tím đậm",
+    "indigo": "Chàm",
+    "lightBlue": "Xanh da trời nhạt",
+    "pink": "Hồng",
+    "purple": "Tím",
+    "red": "Đỏ"
+  },
+  "common": {
+    "cancel": "Huỷ",
+    "close": "Đóng",
+    "confirm": "Xác nhận",
+    "home": "Trang chủ",
+    "newUpdate": "Cập nhật mới",
+    "newVersionInAppStore": "Đã có bản cập nhật mới trên App Store",
+    "newVersionInPlayStore": "Đã có bản cập nhật mới trên Play Store",
+    "ok": "Xác nhận",
+    "passwordInfo": "Mật khẩu phải có ít nhất 6 kí tự, ít nhất 1 chữ hoa, 1 chữ thường, 1 chữ số và 1 kí tự đặc biệt (!, @, #, $, %, ^, &, *)",
+    "select": "Lựa chọn",
+    "settings": "Cài đặt",
+    "update": "Cập nhật",
+    "updateInstalled": "Bản cập nhật mới đã được tải. Vui lòng khởi động lại"
+  },
+  "dialog": {
+    "close": "Đóng",
+    "info": "Thông tin",
+    "warning": "Cảnh báo",
+    "success": "Thành công",
+    "error": "Lỗi"
+  },
+  "emailLoginScreen": {
+    "email": "Email",
+    "forgotPassword": "Quên mật khẩu?",
+    "login": "Đăng nhập",
+    "password": "Mật khẩu",
+    "userDisabled": "Tài khoản đã bị khoá",
+    "wrongEmailOrPassword": "Email hoặc mật khẩu không chính xác"
+  },
+  "emailRegisterScreen": {
+    "accountHasBeenCreated": "Tài khoản đã được tạo",
+    "back": "Quay lại",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "confirmPasswordDoesNotMatch": "Xác nhận mật khẩu không trùng khớp",
+    "email": "Email",
+    "emailHasBeenAlreadyRegistered": "Email đã tồn tại",
+    "password": "Mật khẩu",
+    "register": "Đăng kí"
+  },
+  "emailVerificationScreen": {
+    "check": "Kiểm tra",
+    "emailNotVerified": "Email của bạn chưa được xác thực",
+    "notice": "Email của bạn {{email}} chưa được xác thực. Vui lòng kiểm tra hòm thư, xác thực và ấn nút kiểm tra bên dưới.",
+    "openMailbox": "Mở hòm thư",
+    "resendEmailNotification": "Email xác thực đã được gửi lại. Vui lòng kiểm tra hòm thư",
+    "resendVerification": "Gửi lại email xác nhận",
+    "useAnotherAccount": "Sử dụng tài khoản khác",
+    "verifyEmail": "Xác thực email"
+  },
+  "error": {
+    "invalid": "{{field}} không hợp lệ",
+    "required": "{{field}} bắt buộc",
+    "somethingWentWrong": "Có lỗi xảy ra",
+    "unexpectedErrorOccurred": "Có lỗi xảy ra",
+    "unexpectedErrorOccurredMessage": "Chúng tôi đã báo cáo lỗi cho đội phát triển! Vui lòng đóng ứng dụng và bắt đầu lại!"
+  },
+  "forgotPasswordScreen": {
+    "email": "Email",
+    "forgotPassword": "Quên mật khẩu",
+    "passwordResetEmailSent": "Email khôi phục mật khẩu đã được gửi",
+    "sendPasswordResetEmail": "Gửi thư khôi phục mật khẩu",
+    "userNotFound": "Không tìm thấy tài khoản"
+  },
+  "home": {
+    "hello": "Xin chào"
+  },
+  "loginScreen": {
+    "loginWith": "Đăng nhập với",
+    "loginWithEmail": "Đăng nhập với email",
+    "loginWithPhoneNo": "Đăng nhập với số điện thoại",
+    "notHaveAccount": "Chưa có tài khoản?",
+    "registerByEmail": "Đăng kí bằng email",
+    "registerByPhoneNo": "Đăng kí bằng số điện thoại"
+  },
+  "month": {
+    "april": "Tháng 4",
+    "august": "Tháng 8",
+    "december": "Tháng 12",
+    "february": "Tháng 2",
+    "january": "Tháng 1",
+    "july": "Tháng 7",
+    "june": "Tháng 6",
+    "march": "Tháng 3",
+    "may": "Tháng 5",
+    "november": "Tháng 11",
+    "october": "Tháng 10",
+    "september": "Tháng 9"
+  },
+  "phoneNoLoginScreen": {
+    "countryCode": "Mã quốc gia",
+    "invalidVerificationCode": "Mã xác nhận sai",
+    "login": "Đăng nhập",
+    "phoneNo": "Số điện thoại",
+    "resendCode": "Gửi lại mã",
+    "sendVerificationCode": "Gửi mã xác nhận",
+    "tooManyRequests": "Quá nhiều yêu cầu được gửi. Vui lòng thử lại sau",
+    "userDisabled": "Tài khoản đã bị khoá",
+    "verificationCode": "Mã xác nhận",
+    "verify": "Xác nhận"
+  },
+  "settingsScreen": {
+    "about": "Thông tin",
+    "author": "Tác giả",
+    "changePassword": "Đổi mật khẩu",
+    "language": "Ngôn ngữ",
+    "logout": "Đăng xuất",
+    "primaryColor": "Màu chủ đạo",
+    "settings": "Cài đặt",
+    "theme": "Nền",
+    "version": "Phiên bản"
+  },
+  "theme": {
+    "dark": "Tối",
+    "light": "Sáng"
+  }
+}
