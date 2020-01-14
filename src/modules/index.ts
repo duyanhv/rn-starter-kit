@@ -1,9 +1,10 @@
 // import auth from './auth';
 import settings from './settings';
 import main from './main';
+import auth from './auth';
 
 export const registerModules = (): void => {
-	[settings, main].forEach((module) => {
+	[auth, settings, main].forEach((module) => {
 		module.registerScreens();
 	});
 };

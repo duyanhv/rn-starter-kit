@@ -1,8 +1,8 @@
 import React, { ReactNode, useEffect } from 'react';
 import { navigationService } from '@app/services';
-import { colors } from '@app/core';
+import { colors, THEME_DARK, THEME_LIGHT } from '@app/core';
 import { useTheme } from '@app/hooks';
-import { StatusBar, SafeAreaView, StatusBarStyle } from 'react-native';
+import { StatusBar, SafeAreaView, StatusBarStyle, StatusBarIOS } from 'react-native';
 import { Button } from '../Button';
 import { Left } from '../Left';
 import { Body } from '../Body';
@@ -37,14 +37,18 @@ export const Container = (props: Props): JSX.Element => {
 	};
 	return (
 		<>
-			<SafeAreaView
+			<StatusBar
+				backgroundColor={colors.transparent}
+				barStyle={`${theme === THEME_DARK ? THEME_LIGHT : THEME_DARK}-content` as StatusBarStyle}
+			/>
+			{/* <SafeAreaView
 				style={[
 					styles.rootContainerBackground,
 					{
 						backgroundColor: colors.transparent,
 					},
 				]}
-			/>
+			/> */}
 			<SafeAreaView
 				style={[
 					styles.rootContainer,
@@ -54,10 +58,6 @@ export const Container = (props: Props): JSX.Element => {
 				]}
 			>
 				<ErrorBoundary>
-					<StatusBar
-						//   barStyle={`${theme}-content` as StatusBarStyle}
-						barStyle='dark-content'
-					/>
 					{props.showHeader && (
 						<View
 							style={[

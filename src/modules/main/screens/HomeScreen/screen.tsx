@@ -5,11 +5,16 @@ import { ScrollView, Container, Text, Button } from '@app/components';
 import React from 'react';
 
 import * as Sentry from '@sentry/react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { mapDispatchToProps } from './map_dispatch_to_props';
 import { mapStateToProps } from './map_state_to_props';
 import { RematchSample } from './components/RematchSample';
 
 type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps> & ScreenProps;
+
+const propsDistance = {
+	margin: 15,
+};
 
 export const Screen = ({
 	componentId,
@@ -25,6 +30,7 @@ Props): JSX.Element => {
 		// 	appService.checkNeedUpdateNewBinaryVersion();
 		// 	updateShownUpdateWarning(false);
 		// }
+		// console.log(store.getState().settings);
 	});
 	//   const pushNewScreen = (): void => {
 	//     navigationService.navigateTo({
@@ -66,12 +72,7 @@ Props): JSX.Element => {
 					paddingTop: getStatusHeight(),
 				}}
 			>
-				<Text
-					h1={true}
-					style={{
-						margin: 15,
-					}}
-				>
+				<Text h1={true} style={propsDistance}>
 					Main
 				</Text>
 				<RematchSample
@@ -83,13 +84,16 @@ Props): JSX.Element => {
 					incrementDolphinAsync={incrementDolphinAsync}
 				/>
 
-				<Button
-					style={{
-						margin: 15,
-					}}
-					onPress={() => Sentry.nativeCrash()}
-				>
+				<Button style={propsDistance} onPress={() => Sentry.nativeCrash()}>
 					<Text>Crash Simulation</Text>
+				</Button>
+				<Button
+					style={propsDistance}
+					onPress={async () => {
+						await AsyncStorage.removeItem('persist:root');
+					}}
+				>
+					<Text>Clear AsyncStorage</Text>
 				</Button>
 			</ScrollView>
 		</Container>
