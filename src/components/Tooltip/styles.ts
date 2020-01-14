@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'flex-start',
-  },
+	container: {
+		justifyContent: 'flex-start',
+	},
 });

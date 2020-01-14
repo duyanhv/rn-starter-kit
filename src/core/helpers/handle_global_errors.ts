@@ -21,7 +21,8 @@ const showAndRecordError = (error: Error, _isFatal: boolean = false): void => {
 // https://stackoverflow.com/questions/48487089/global-unhandledrejection-listener-in-react-native
 // We use the "Bluebird" lib for Promises, because it shows good perf
 // and it implements the "unhandledrejection" event:
-global.Promise = Promise;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(global as any).Promise = Promise;
 
 // Global catch of unhandled Promise rejections:
 ((global as unknown) as Bluebird).onunhandledrejection = (error: Error): void => {

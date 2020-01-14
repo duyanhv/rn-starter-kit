@@ -8,8 +8,8 @@ export type DolphinsStateType = DolphinsState;
 export type SettingsStateType = SettingsState;
 export type VersionCheckStateType = VersionCheckState;
 export const models = {
-  settings,
-  sharks,
-  dolphins,
-  minimumVersionChecks,
+	settings,
+	sharks,
+	dolphins,
+	minimumVersionChecks,
 };

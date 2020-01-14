@@ -4,38 +4,38 @@ import { recordError } from '@app/core';
 import { ErrorText } from '../ErrorText';
 
 interface State {
-  hasError: boolean;
+	hasError: boolean;
 }
 
 const ErrorMessage = (): JSX.Element => {
-  const { t } = useTranslation();
-  return <ErrorText>{t('error.somethingWentWrong')}</ErrorText>;
+	const { t } = useTranslation();
+	return <ErrorText>{t('error.somethingWentWrong')}</ErrorText>;
 };
 
 export class ErrorBoundary extends Component<{}, State> {
-  private constructor(props: {}) {
-    super(props);
-    this.state = {
-      hasError: false,
-    };
-  }
+	private constructor(props: {}) {
+		super(props);
+		this.state = {
+			hasError: false,
+		};
+	}
 
-  public static getDerivedStateFromError(): State {
-    // Update state so the next render will show the fallback UI.
-    return {
-      hasError: true,
-    };
-  }
+	public static getDerivedStateFromError(): State {
+		// Update state so the next render will show the fallback UI.
+		return {
+			hasError: true,
+		};
+	}
 
-  public componentDidCatch(error: Error): void {
-    recordError(error);
-  }
+	public componentDidCatch(error: Error): void {
+		recordError(error);
+	}
 
-  public render(): ReactNode | JSX.Element {
-    if (this.state.hasError) {
-      return <ErrorMessage />;
-    }
+	public render(): ReactNode | JSX.Element {
+		if (this.state.hasError) {
+			return <ErrorMessage />;
+		}
 
-    return this.props.children;
-  }
+		return this.props.children;
+	}
 }
