@@ -67,7 +67,7 @@ const setRootStack = (screenName: string): void => {
 		},
 	});
 };
-const setRootAppLoader = (): void => setRootStack(screenNames.HomeScreen);
+const setRootAppLoader = (): void => setRootStack(screenNames.AppLoaderScreen);
 
 const setRootLogin = (): void => setRootStack(screenNames.LoginScreen);
 
@@ -143,7 +143,7 @@ const setRootHome = async (currentTabIndex?: number): Promise<void> => {
 const initialize = (): void => {
 	Navigation.events().registerAppLaunchedListener((): void => {
 		setRootAppLoader();
-		setRootHome();
+		// setRootHome();
 		setDefaultOptions();
 	});
 };
