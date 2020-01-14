@@ -4,14 +4,14 @@ import { screenNames } from '@app/core';
 import { SettingsScreen } from './screens';
 
 const registerScreens = (): void => {
-  Navigation.registerComponent(screenNames.SettingsScreen, () =>
-    WithScreen(WithStore(SettingsScreen), {
-      lazyLoad: true,
-      orientation: 'PORTRAIT',
-    }),
-  );
+	Navigation.registerComponent(screenNames.SettingsScreen, () =>
+		WithScreen(WithStore(SettingsScreen), {
+			lazyLoad: true,
+			orientation: 'PORTRAIT',
+		}),
+	);
 };
 
 export default {
-  registerScreens,
+	registerScreens,
 };

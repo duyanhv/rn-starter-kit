@@ -6,26 +6,26 @@ import { View } from '../View';
 import { styles } from './styles';
 
 interface Props extends ViewProps {
-  primary?: boolean;
-  children?: ReactNode;
+	primary?: boolean;
+	children?: ReactNode;
 }
 
 export const Card = (props: Props): JSX.Element => {
-  const { componentBackgroundColor } = useTheme();
+	const { componentBackgroundColor } = useTheme();
 
-  const style = combineStyles<ViewStyle>(
-    styles.default,
-    {
-      backgroundColor: componentBackgroundColor,
-    },
-    props.style,
-  );
+	const style = combineStyles<ViewStyle>(
+		styles.default,
+		{
+			backgroundColor: componentBackgroundColor,
+		},
+		props.style,
+	);
 
-  return (
-    <>
-      <View {...props} style={style}>
-        {props.children}
-      </View>
-    </>
-  );
+	return (
+		<>
+			<View {...props} style={style}>
+				{props.children}
+			</View>
+		</>
+	);
 };

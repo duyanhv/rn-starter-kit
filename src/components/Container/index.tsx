@@ -1,8 +1,8 @@
-import React, { ReactNode, useEffect } from 'react';
+import React, { ReactNode } from 'react';
 import { navigationService } from '@app/services';
 import { colors, THEME_DARK, THEME_LIGHT } from '@app/core';
 import { useTheme } from '@app/hooks';
-import { StatusBar, SafeAreaView, StatusBarStyle, StatusBarIOS } from 'react-native';
+import { StatusBar, SafeAreaView, StatusBarStyle } from 'react-native';
 import { Button } from '../Button';
 import { Left } from '../Left';
 import { Body } from '../Body';

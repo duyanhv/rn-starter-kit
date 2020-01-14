@@ -8,8 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint 'src/**/**.{ts,tsx}' && prettier --check 'src/**/*.{ts,tsx}'",
-	"lint-fix": "prettier --write '{src}/**/*.{ts,tsx}' && eslint '{src}/**/**.{ts,tsx}' --fix",
-	"prettier": "prettier --write '{src}/**/*.{ts,tsx}'",
+	"lint-fix": "prettier --write 'src/**/*.{ts,tsx}' && eslint 'src/**/**.{ts,tsx}' --fix",
+	"prettier": "prettier --write 'src/**/*.{ts,tsx}'",
 	"validate": "yarn lint && yarn code-check",
 	"code-check": "tsc && rm -rf dist"
   },

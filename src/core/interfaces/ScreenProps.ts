@@ -1,3 +1,3 @@
 export interface ScreenProps {
-    componentId: string;
+	componentId: string;
 }
