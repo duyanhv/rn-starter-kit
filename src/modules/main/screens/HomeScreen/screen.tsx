@@ -1,8 +1,8 @@
 import { ScreenProps, sleep, getStatusHeight } from '@app/core';
 import { useEffectOnce } from '@app/hooks';
 // import { navigationService } from '@app/services';
-import { ScrollView, Container, Text, Button } from '@app/components';
-import React from 'react';
+import { ScrollView, Container, Text, Button, GuideModal } from '@app/components';
+import React, { useState } from 'react';
 
 import * as Sentry from '@sentry/react-native';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -45,7 +45,7 @@ Props): JSX.Element => {
 	//       tabIndex: 1,
 	//     });
 	//   };
-
+	const [guideModalVisibility, setGuideModalVisibility] = useState(true);
 	const incrementSharkAsync = async (): Promise<void> => {
 		await sleep(500);
 		incrementShark(1);
@@ -83,7 +83,15 @@ Props): JSX.Element => {
 					incrementDolphin={incrementDolphin1}
 					incrementDolphinAsync={incrementDolphinAsync}
 				/>
-
+				<GuideModal
+					visible={guideModalVisibility}
+					setModalVisibility={setGuideModalVisibility}
+					// transparent={true}
+					animationType={'slide'}
+				/>
+				<Button style={propsDistance} onPress={() => setGuideModalVisibility(true)}>
+					<Text>Open Guide</Text>
+				</Button>
 				<Button style={propsDistance} onPress={() => Sentry.nativeCrash()}>
 					<Text>Crash Simulation</Text>
 				</Button>

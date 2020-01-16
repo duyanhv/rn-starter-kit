@@ -2,14 +2,15 @@ import { setJSExceptionHandler, setNativeExceptionHandler } from 'react-native-e
 import i18next from 'i18next';
 import Promise from 'bluebird';
 import { Alert } from '@app/components';
-import { recordError } from '@app/core';
+// import { recordError } from '@app/core';
 
 export interface Bluebird {
 	onunhandledrejection: (error: Error) => void;
 }
 
-const showAndRecordError = (error: Error, _isFatal: boolean = false): void => {
-	recordError(error);
+const showAndRecordError = (_error: Error, _isFatal: boolean = false): void => {
+	// console.log('Fucking Error', error);
+	// recordError(error);
 	Alert.show({
 		type: 'ERROR',
 		title: i18next.t('error.unexpectedErrorOccurred'),
@@ -34,10 +35,12 @@ const showAndRecordError = (error: Error, _isFatal: boolean = false): void => {
 
 export const handleGlobalErrors = (): void => {
 	setJSExceptionHandler((error: Error, isFatal: boolean) => {
+		// console.log(error, isFatal);
 		showAndRecordError(error, isFatal);
 	}, true);
 	setNativeExceptionHandler(
 		(errorString: string) => {
+			// console.log('Fuck2');
 			showAndRecordError(new Error(errorString), true);
 		},
 		false,

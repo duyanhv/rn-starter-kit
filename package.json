@@ -11,7 +11,8 @@
     "lint-fix": "prettier --write 'src/**/*.{ts,tsx}' && eslint 'src/**/**.{ts,tsx}' --fix",
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
     "validate": "yarn lint && yarn code-check",
-    "code-check": "tsc && rm -rf dist"
+	"code-check": "tsc && rm -rf dist",
+	"ios-device": "react-native run-ios --device"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.1",

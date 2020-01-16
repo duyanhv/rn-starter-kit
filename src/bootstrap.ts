@@ -1,5 +1,5 @@
 import { registerModules } from '@app/modules';
-import { handleGlobalErrors, i18n, initializeSentry } from '@app/core';
+import { handleGlobalErrors, i18n } from '@app/core';
 import { navigationService } from '@app/services';
 
 const bootstrap = async (): Promise<void> => {
@@ -7,7 +7,7 @@ const bootstrap = async (): Promise<void> => {
 	registerModules();
 	await i18n.initialize();
 	navigationService.initialize();
-	initializeSentry();
+	// initializeSentry();
 };
 
 bootstrap();

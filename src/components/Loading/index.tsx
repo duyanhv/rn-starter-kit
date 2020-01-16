@@ -10,5 +10,5 @@ const loading = jsonSources.loading();
 
 export const Loading = ({ size }: Props): JSX.Element => {
 	const loadingSize = size === 'LARGE' ? 200 : 100;
-	return <Animation source={loading} width={loadingSize} height={loadingSize} autoPlay loop />;
+	return <Animation flex={false} source={loading} width={loadingSize} height={loadingSize} autoPlay loop />;
 };

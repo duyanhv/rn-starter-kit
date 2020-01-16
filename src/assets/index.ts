@@ -23,4 +23,10 @@ export const jsonSources = {
 	primaryColors: () => require('./json/primary_colors.json') as PrimaryColor[],
 	loading: () => require('./json/loading.json'),
 };
+export const lottie = {
+	guide: {
+		firstGuide: () => require('./lottie/guide/guide_1.json'),
+	},
+	checkMarkSuccess: () => require('./lottie/check-mark-success.json'),
+};
 /* eslint-enable global-require */
