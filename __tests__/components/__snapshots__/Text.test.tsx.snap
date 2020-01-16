@@ -1,0 +1,543 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Container renders bold text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      bold={true}
+      style={
+        Object {
+          "color": "white",
+          "fontWeight": "bold",
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders danger text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      danger={true}
+      style={
+        Object {
+          "color": "#FC4173",
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders h1 text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      h1={true}
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 36,
+          "fontWeight": "bold",
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders h2 text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      h2={true}
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 32,
+          "fontWeight": "bold",
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders h3 text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      h3={true}
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 28,
+          "fontWeight": "bold",
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders h4 text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      h4={true}
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 24,
+          "fontWeight": "bold",
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders h5 text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      h5={true}
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders h6 text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      h6={true}
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 18,
+          "fontWeight": "bold",
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders info text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      info={true}
+      style={
+        Object {
+          "color": "#1A97FC",
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders primary text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      primary={true}
+      style={
+        Object {
+          "color": "black",
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders s1 text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      s1={true}
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 16,
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders s2 text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      s2={true}
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 14,
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders success text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#24DF98",
+          "textTransform": "none",
+        }
+      }
+      success={true}
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "textTransform": "none",
+        }
+      }
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders warning text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FDA929",
+          "textTransform": "none",
+        }
+      }
+      warning={true}
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/Container renders white text successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "textTransform": "none",
+        }
+      }
+      white={true}
+    >
+      text
+    </Text>
+  </View>
+</View>
+`;

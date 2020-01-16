@@ -1,0 +1,533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Button renders danger button successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        danger={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FC4173",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 200,
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Button renders disabled button successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        disabled={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#8B97AC",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 200,
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Button renders info button successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        info={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#1A97FC",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 200,
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Button renders outline button successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        outline={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderColor": "black",
+            "borderRadius": 20,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 200,
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Button renders rounded button successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        rounded={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 200,
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Button renders success button successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#24DF98",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 200,
+          }
+        }
+        success={true}
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Button renders successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 200,
+          }
+        }
+      >
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "white",
+              "fontWeight": "bold",
+              "textTransform": "none",
+            }
+          }
+        >
+          Button
+        </Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Button renders successfully with light theme 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 200,
+          }
+        }
+      >
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "white",
+              "fontWeight": "bold",
+              "textTransform": "none",
+            }
+          }
+        >
+          Button
+        </Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Button renders transparent button successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 200,
+          }
+        }
+        transparent={true}
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Button renders undefined children successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 100,
+          }
+        }
+        width={100}
+      >
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "white",
+              "fontWeight": "bold",
+              "textTransform": "none",
+            }
+          }
+        >
+          Button
+        </Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Button renders warning button successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FDA929",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 200,
+          }
+        }
+        warning={true}
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Button renders with specified width successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "borderRadius": 20,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "center",
+            "width": 100,
+          }
+        }
+        width={100}
+      >
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "white",
+              "fontWeight": "bold",
+              "textTransform": "none",
+            }
+          }
+        >
+          Button
+        </Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+</View>
+`;

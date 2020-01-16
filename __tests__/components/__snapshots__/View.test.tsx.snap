@@ -1,0 +1,462 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/View renders successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={Object {}}
+    />
+  </View>
+</View>
+`;
+
+exports[`components/View renders two text children successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={Object {}}
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        text1
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        text2
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/View renders with center props successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      center={true}
+      style={
+        Object {
+          "alignItems": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        view
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/View renders with center vertical props successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      centerVertical={true}
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        view
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/View renders with column props successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      column={true}
+      style={
+        Object {
+          "flexDirection": "column",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        view
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/View renders with columnReverse props successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      columnReverse={true}
+      style={
+        Object {
+          "flexDirection": "column-reverse",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        view
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/View renders with flex successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      flex={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        view
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/View renders with row props successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      row={true}
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        view
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/View renders with rowReverse props successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      rowReverse={true}
+      style={
+        Object {
+          "flexDirection": "row-reverse",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        view
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/View renders with text and icon children successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={Object {}}
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        text1
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        text2
+      </Text>
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#1A97FC",
+              "fontSize": 25,
+            },
+            undefined,
+            Object {
+              "fontFamily": "Material Design Icons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/View renders with text children successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={Object {}}
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        view
+      </Text>
+    </View>
+  </View>
+</View>
+`;

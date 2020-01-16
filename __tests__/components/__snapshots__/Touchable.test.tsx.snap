@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Touchable renders successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        style={Object {}}
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "textTransform": "none",
+            }
+          }
+        >
+          button
+        </Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`components/Touchable renders successfully on android 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <DummyTouchableNativeFeedback>
+      <View
+        style={Object {}}
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "textTransform": "none",
+            }
+          }
+        >
+          button
+        </Text>
+      </View>
+    </DummyTouchableNativeFeedback>
+  </View>
+</View>
+`;
+
+exports[`components/Touchable renders with text and icon successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+    >
+      <View
+        style={Object {}}
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#fff",
+                "fontSize": 25,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "textTransform": "none",
+            }
+          }
+        >
+          button
+        </Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+</View>
+`;

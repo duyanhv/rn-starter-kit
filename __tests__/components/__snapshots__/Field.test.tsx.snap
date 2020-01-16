@@ -1,0 +1,923 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Field renders successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+          Object {
+            "flex": 0,
+            "paddingTop": 10,
+          },
+          Object {
+            "backgroundColor": "black",
+          },
+        ]
+      }
+    >
+      <View
+        center={true}
+        row={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "textTransform": "none",
+              },
+              Object {
+                "marginBottom": 5,
+                "marginTop": 5,
+              },
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          label
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {},
+            Object {
+              "borderRadius": 25,
+              "borderWidth": 1,
+              "fontSize": 15,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+            },
+            Object {
+              "borderColor": "black",
+            },
+          ]
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          placeholder="label"
+          placeholderTextColor="white"
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+          underlineColorAndroid="transparent"
+          value="value"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/Field renders with error successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+          Object {
+            "flex": 0,
+            "paddingTop": 10,
+          },
+          Object {
+            "backgroundColor": "black",
+          },
+        ]
+      }
+    >
+      <View
+        center={true}
+        row={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "textTransform": "none",
+              },
+              Object {
+                "marginBottom": 5,
+                "marginTop": 5,
+              },
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          label
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {},
+            Object {
+              "borderRadius": 25,
+              "borderWidth": 1,
+              "fontSize": 15,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+            },
+            Object {
+              "borderColor": "#FC4173",
+            },
+          ]
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          placeholder="label"
+          placeholderTextColor="white"
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+          underlineColorAndroid="transparent"
+          value="value"
+        />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "textTransform": "none",
+            },
+            Object {
+              "color": "#FC4173",
+              "fontSize": 13,
+            },
+            Object {
+              "marginBottom": 5,
+              "marginLeft": 15,
+              "marginTop": 5,
+            },
+            Object {
+              "color": "#FC4173",
+            },
+          ]
+        }
+      >
+        error
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/Field renders with light theme successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+          Object {
+            "flex": 0,
+            "paddingTop": 10,
+          },
+          Object {
+            "backgroundColor": "black",
+          },
+        ]
+      }
+    >
+      <View
+        center={true}
+        row={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "textTransform": "none",
+              },
+              Object {
+                "marginBottom": 5,
+                "marginTop": 5,
+              },
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          label
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {},
+            Object {
+              "borderRadius": 25,
+              "borderWidth": 1,
+              "fontSize": 15,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+            },
+            Object {
+              "borderColor": "black",
+            },
+          ]
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          placeholder="label"
+          placeholderTextColor="white"
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+          underlineColorAndroid="transparent"
+          value="value"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/Field renders with success successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+          Object {
+            "flex": 0,
+            "paddingTop": 10,
+          },
+          Object {
+            "backgroundColor": "black",
+          },
+        ]
+      }
+    >
+      <View
+        center={true}
+        row={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "textTransform": "none",
+              },
+              Object {
+                "marginBottom": 5,
+                "marginTop": 5,
+              },
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          label
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {},
+            Object {
+              "borderRadius": 25,
+              "borderWidth": 1,
+              "fontSize": 15,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+            },
+            Object {
+              "borderColor": "#24DF98",
+            },
+          ]
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          placeholder="label"
+          placeholderTextColor="white"
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+          underlineColorAndroid="transparent"
+          value="value"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/Field renders with tooltip successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+          Object {
+            "flex": 0,
+            "paddingTop": 10,
+          },
+          Object {
+            "backgroundColor": "black",
+          },
+        ]
+      }
+    >
+      <View
+        center={true}
+        row={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "textTransform": "none",
+              },
+              Object {
+                "marginBottom": 5,
+                "marginTop": 5,
+              },
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          label
+        </Text>
+        <View
+          collapsable={false}
+        >
+          <TouchableOpacity
+            activeOpacity={1}
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "white",
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "margin": 8,
+                  },
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </TouchableOpacity>
+          <Modal
+            animationType="fade"
+            hardwareAccelerated={false}
+            transparent={true}
+            visible={false}
+          >
+            <TouchableOpacity
+              activeOpacity={1}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "flex": 1,
+                }
+              }
+            >
+              <View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "visible",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": 0,
+                    }
+                  }
+                >
+                  <Text
+                    allowFontScaling={false}
+                    style={
+                      Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 14,
+                        },
+                        Object {
+                          "margin": 8,
+                        },
+                        Object {
+                          "fontFamily": "Material Design Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "left": -7.5,
+                      "position": "absolute",
+                      "top": -2,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderBottomColor": "white",
+                          "borderBottomWidth": 15,
+                          "borderLeftColor": "transparent",
+                          "borderLeftWidth": 8,
+                          "borderRightColor": "transparent",
+                          "borderRightWidth": 8,
+                          "borderStyle": "solid",
+                          "height": 0,
+                          "width": 0,
+                        },
+                        Object {
+                          "borderBottomColor": "#fff",
+                        },
+                        Object {},
+                      ]
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#fff",
+                      "borderRadius": 10,
+                      "display": "flex",
+                      "flex": 1,
+                      "height": 100,
+                      "justifyContent": "flex-start",
+                      "left": -17.999,
+                      "padding": 10,
+                      "position": "absolute",
+                      "top": 10,
+                      "width": 100,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#222C44",
+                        "textTransform": "none",
+                      }
+                    }
+                  >
+                    tooltip
+                  </Text>
+                </View>
+              </View>
+            </TouchableOpacity>
+          </Modal>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {},
+            Object {
+              "borderRadius": 25,
+              "borderWidth": 1,
+              "fontSize": 15,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+            },
+            Object {
+              "borderColor": "black",
+            },
+          ]
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          placeholder="label"
+          placeholderTextColor="white"
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+          underlineColorAndroid="transparent"
+          value="value"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/Field renders with tooltip without specifying width and height successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+          Object {
+            "flex": 0,
+            "paddingTop": 10,
+          },
+          Object {
+            "backgroundColor": "black",
+          },
+        ]
+      }
+    >
+      <View
+        center={true}
+        row={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "black",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "textTransform": "none",
+              },
+              Object {
+                "marginBottom": 5,
+                "marginTop": 5,
+              },
+              Object {
+                "color": "white",
+              },
+            ]
+          }
+        >
+          label
+        </Text>
+        <View
+          collapsable={false}
+        >
+          <TouchableOpacity
+            activeOpacity={1}
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "white",
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "margin": 8,
+                  },
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </TouchableOpacity>
+          <Modal
+            animationType="fade"
+            hardwareAccelerated={false}
+            transparent={true}
+            visible={false}
+          >
+            <TouchableOpacity
+              activeOpacity={1}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "flex": 1,
+                }
+              }
+            >
+              <View>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "height": 0,
+                      "left": 0,
+                      "overflow": "visible",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": 0,
+                    }
+                  }
+                >
+                  <Text
+                    allowFontScaling={false}
+                    style={
+                      Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 14,
+                        },
+                        Object {
+                          "margin": 8,
+                        },
+                        Object {
+                          "fontFamily": "Material Design Icons",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "left": -7.5,
+                      "position": "absolute",
+                      "top": -2,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderBottomColor": "white",
+                          "borderBottomWidth": 15,
+                          "borderLeftColor": "transparent",
+                          "borderLeftWidth": 8,
+                          "borderRightColor": "transparent",
+                          "borderRightWidth": 8,
+                          "borderStyle": "solid",
+                          "height": 0,
+                          "width": 0,
+                        },
+                        Object {
+                          "borderBottomColor": "#fff",
+                        },
+                        Object {},
+                      ]
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#fff",
+                      "borderRadius": 10,
+                      "display": "flex",
+                      "flex": 1,
+                      "height": 50,
+                      "justifyContent": "flex-start",
+                      "left": -17.999,
+                      "padding": 10,
+                      "position": "absolute",
+                      "top": 10,
+                      "width": 250,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#222C44",
+                        "textTransform": "none",
+                      }
+                    }
+                  >
+                    tooltip
+                  </Text>
+                </View>
+              </View>
+            </TouchableOpacity>
+          </Modal>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {},
+            Object {
+              "borderRadius": 25,
+              "borderWidth": 1,
+              "fontSize": 15,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+            },
+            Object {
+              "borderColor": "black",
+            },
+          ]
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          placeholder="label"
+          placeholderTextColor="white"
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+          underlineColorAndroid="transparent"
+          value="value"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;

@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/CardItem renders successfully with Text and Button 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "grey",
+          "padding": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        Hello
+      </Text>
+      <TouchableOpacity
+        activeOpacity={0.2}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "black",
+              "borderRadius": 20,
+              "flexDirection": "row",
+              "height": 45,
+              "justifyContent": "center",
+              "width": 200,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+                "textTransform": "none",
+              }
+            }
+          >
+            button
+          </Text>
+        </View>
+      </TouchableOpacity>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/CardItem renders with bordered card item successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      bordered={true}
+      header={false}
+      style={
+        Object {
+          "backgroundColor": "grey",
+          "borderTopColor": "#1A2237",
+          "borderTopWidth": 1,
+          "padding": 5,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`components/CardItem renders with primary color successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      primary={true}
+      style={
+        Object {
+          "backgroundColor": "grey",
+          "padding": 5,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`components/CardItem renders with theme light color successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      primary={true}
+      style={
+        Object {
+          "backgroundColor": "grey",
+          "padding": 5,
+        }
+      }
+    />
+  </View>
+</View>
+`;

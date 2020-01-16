@@ -16,6 +16,7 @@ export const Screen = ({ appLoaded, language, theme, changeTheme }: Props): JSX.
 		if (!appLoaded) {
 			return;
 		}
+
 		AsyncStorage.getItem('persist:root').then((value: string | null) => {
 			const localStorageState: RootState = JSON.parse(value ?? '');
 			const settings: SettingsStateType = JSON.parse((localStorageState.settings as unknown) as string);
