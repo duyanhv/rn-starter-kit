@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/ErrorBoundary renders successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "textTransform": "none",
+        }
+      }
+    >
+      Text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`components/ErrorBoundary renders with errors successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FC4173",
+          "fontSize": 13,
+          "textTransform": "none",
+        }
+      }
+    >
+      error.somethingWentWrong
+    </Text>
+  </View>
+</View>
+`;

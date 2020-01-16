@@ -1,0 +1,969 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/List calls function when pressing successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <ScrollView
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 230,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "onPress": [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
+            },
+            "title": "title",
+            "value": "value",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      horizontal={false}
+      initialNumToRender={10}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReachedThreshold={2}
+      removeClippedSubviews={false}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={
+        Array [
+          0,
+        ]
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View
+        style={null}
+      >
+        <TouchableHighlight
+          activeOpacity={0.85}
+          delayPressOut={100}
+          underlayColor="#DDD"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "borderBottomWidth": 0.5,
+                "borderColor": "#c9c9c9",
+                "flexDirection": "row",
+                "marginLeft": 16,
+                "paddingBottom": 13,
+                "paddingRight": 16,
+                "paddingTop": 13,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "alignSelf": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                title
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-end",
+                    "alignSelf": "center",
+                    "flex": 0.28,
+                    "paddingBottom": null,
+                    "paddingLeft": null,
+                    "paddingRight": null,
+                    "paddingTop": null,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row-reverse",
+                    "minWidth": 100,
+                  },
+                ]
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                value
+              </Text>
+            </View>
+          </View>
+        </TouchableHighlight>
+      </View>
+    </ScrollView>
+  </View>
+</View>
+`;
+
+exports[`components/List renders header items successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <ScrollView
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 230,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "isHeader": true,
+            "title": "title",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      horizontal={false}
+      initialNumToRender={10}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReachedThreshold={2}
+      removeClippedSubviews={false}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={
+        Array [
+          0,
+        ]
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View
+        style={null}
+      >
+        <TouchableHighlight
+          activeOpacity={0.85}
+          delayPressOut={100}
+          itemDivider={true}
+          underlayColor="#DDD"
+        >
+          <View
+            itemDivider={true}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#f4f4f4",
+                  "borderBottomWidth": null,
+                  "borderColor": "#c9c9c9",
+                  "flexDirection": "row",
+                  "marginLeft": null,
+                  "paddingBottom": 10,
+                  "paddingLeft": 15,
+                  "paddingRight": 10,
+                  "paddingTop": 10,
+                },
+                Object {
+                  "backgroundColor": undefined,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "alignSelf": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#fff",
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                title
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "alignSelf": "center",
+                  "flex": 0.28,
+                  "paddingBottom": null,
+                  "paddingLeft": null,
+                  "paddingRight": null,
+                  "paddingTop": null,
+                }
+              }
+            />
+          </View>
+        </TouchableHighlight>
+      </View>
+    </ScrollView>
+  </View>
+</View>
+`;
+
+exports[`components/List renders item with icon custom successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <ScrollView
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 230,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "icon": "arrow-right",
+            "showIcon": true,
+            "title": "title",
+            "value": "value",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      horizontal={false}
+      initialNumToRender={10}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReachedThreshold={2}
+      removeClippedSubviews={false}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={
+        Array [
+          0,
+        ]
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View
+        style={null}
+      >
+        <TouchableHighlight
+          activeOpacity={0.85}
+          delayPressOut={100}
+          underlayColor="#DDD"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "borderBottomWidth": 0.5,
+                "borderColor": "#c9c9c9",
+                "flexDirection": "row",
+                "marginLeft": 16,
+                "paddingBottom": 13,
+                "paddingRight": 16,
+                "paddingTop": 13,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "alignSelf": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                title
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-end",
+                    "alignSelf": "center",
+                    "flex": 0.28,
+                    "paddingBottom": null,
+                    "paddingLeft": null,
+                    "paddingRight": null,
+                    "paddingTop": null,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row-reverse",
+                    "minWidth": 100,
+                  },
+                ]
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": undefined,
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                value
+              </Text>
+            </View>
+          </View>
+        </TouchableHighlight>
+      </View>
+    </ScrollView>
+  </View>
+</View>
+`;
+
+exports[`components/List renders item with icon default successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <ScrollView
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 230,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "showIcon": true,
+            "title": "title",
+            "value": "value",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      horizontal={false}
+      initialNumToRender={10}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReachedThreshold={2}
+      removeClippedSubviews={false}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={
+        Array [
+          0,
+        ]
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View
+        style={null}
+      >
+        <TouchableHighlight
+          activeOpacity={0.85}
+          delayPressOut={100}
+          underlayColor="#DDD"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "borderBottomWidth": 0.5,
+                "borderColor": "#c9c9c9",
+                "flexDirection": "row",
+                "marginLeft": 16,
+                "paddingBottom": 13,
+                "paddingRight": 16,
+                "paddingTop": 13,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "alignSelf": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                title
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-end",
+                    "alignSelf": "center",
+                    "flex": 0.28,
+                    "paddingBottom": null,
+                    "paddingLeft": null,
+                    "paddingRight": null,
+                    "paddingTop": null,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row-reverse",
+                    "minWidth": 100,
+                  },
+                ]
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": undefined,
+                      "fontSize": 18,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "Material Design Icons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                value
+              </Text>
+            </View>
+          </View>
+        </TouchableHighlight>
+      </View>
+    </ScrollView>
+  </View>
+</View>
+`;
+
+exports[`components/List renders item with primary successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <ScrollView
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 230,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "primaryColor": "#1A97FC",
+            "title": "title",
+            "value": "value",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      horizontal={false}
+      initialNumToRender={10}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReachedThreshold={2}
+      removeClippedSubviews={false}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={
+        Array [
+          0,
+        ]
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View
+        style={null}
+      >
+        <TouchableHighlight
+          activeOpacity={0.85}
+          delayPressOut={100}
+          underlayColor="#DDD"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "borderBottomWidth": 0.5,
+                "borderColor": "#c9c9c9",
+                "flexDirection": "row",
+                "marginLeft": 16,
+                "paddingBottom": 13,
+                "paddingRight": 16,
+                "paddingTop": 13,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "alignSelf": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                title
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-end",
+                    "alignSelf": "center",
+                    "flex": 0.28,
+                    "paddingBottom": null,
+                    "paddingLeft": null,
+                    "paddingRight": null,
+                    "paddingTop": null,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row-reverse",
+                    "minWidth": 100,
+                  },
+                ]
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                value
+              </Text>
+            </View>
+          </View>
+        </TouchableHighlight>
+      </View>
+    </ScrollView>
+  </View>
+</View>
+`;
+
+exports[`components/List renders item with value successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <ScrollView
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 230,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "title": "title",
+            "value": "value",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      horizontal={false}
+      initialNumToRender={10}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReachedThreshold={2}
+      removeClippedSubviews={false}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={
+        Array [
+          0,
+        ]
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View
+        style={null}
+      >
+        <TouchableHighlight
+          activeOpacity={0.85}
+          delayPressOut={100}
+          underlayColor="#DDD"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "borderBottomWidth": 0.5,
+                "borderColor": "#c9c9c9",
+                "flexDirection": "row",
+                "marginLeft": 16,
+                "paddingBottom": 13,
+                "paddingRight": 16,
+                "paddingTop": 13,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "alignSelf": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                title
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-end",
+                    "alignSelf": "center",
+                    "flex": 0.28,
+                    "paddingBottom": null,
+                    "paddingLeft": null,
+                    "paddingRight": null,
+                    "paddingTop": null,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row-reverse",
+                    "minWidth": 100,
+                  },
+                ]
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                value
+              </Text>
+            </View>
+          </View>
+        </TouchableHighlight>
+      </View>
+    </ScrollView>
+  </View>
+</View>
+`;
+
+exports[`components/List renders successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <ScrollView
+      contentContainerStyle={
+        Object {
+          "paddingBottom": 230,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "title": "title",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      horizontal={false}
+      initialNumToRender={10}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReachedThreshold={2}
+      removeClippedSubviews={false}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={
+        Array [
+          0,
+        ]
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View
+        style={null}
+      >
+        <TouchableHighlight
+          activeOpacity={0.85}
+          delayPressOut={100}
+          underlayColor="#DDD"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "borderBottomWidth": 0.5,
+                "borderColor": "#c9c9c9",
+                "flexDirection": "row",
+                "marginLeft": 16,
+                "paddingBottom": 13,
+                "paddingRight": 16,
+                "paddingTop": 13,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "alignSelf": "center",
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              >
+                title
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-end",
+                    "alignSelf": "center",
+                    "flex": 0.28,
+                    "paddingBottom": null,
+                    "paddingLeft": null,
+                    "paddingRight": null,
+                    "paddingTop": null,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row-reverse",
+                    "minWidth": 100,
+                  },
+                ]
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "textTransform": "none",
+                  }
+                }
+              />
+            </View>
+          </View>
+        </TouchableHighlight>
+      </View>
+    </ScrollView>
+  </View>
+</View>
+`;

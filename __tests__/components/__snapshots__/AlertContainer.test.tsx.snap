@@ -1,0 +1,1433 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/AlertContainer renders error alert successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={Object {}}
+      >
+        <View
+          style={
+            Array [
+              Object {},
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#1A2237",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#FC4173",
+                "borderTopLeftRadius": 5,
+                "borderTopRightRadius": 5,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#fff",
+                    "fontSize": 25,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "paddingVertical": 10,
+                  "textAlign": "center",
+                  "textTransform": "none",
+                }
+              }
+            >
+              dialog.error
+            </Text>
+            <View
+              style={
+                Object {
+                  "height": 30,
+                  "width": 30,
+                }
+              }
+            />
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "textTransform": "none",
+                },
+                Object {
+                  "paddingVertical": 15,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#fff",
+                },
+              ]
+            }
+          >
+            Message
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginBottom": 10,
+              }
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "black",
+                    "borderRadius": 20,
+                    "flexDirection": "row",
+                    "height": 45,
+                    "justifyContent": "center",
+                    "marginHorizontal": 5,
+                    "width": 80,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontWeight": "bold",
+                      "textTransform": "none",
+                    }
+                  }
+                  white={true}
+                >
+                  dialog.close
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <TouchableOpacity
+          activeOpacity={0.2}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "borderRadius": 20,
+                "flexDirection": "row",
+                "height": 45,
+                "justifyContent": "center",
+                "width": 200,
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Object {
+                  "color": "white",
+                  "fontWeight": "bold",
+                  "textTransform": "none",
+                }
+              }
+            >
+              Close
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/AlertContainer renders info alert successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={Object {}}
+      >
+        <View
+          style={
+            Array [
+              Object {},
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#1A2237",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "borderTopLeftRadius": 5,
+                "borderTopRightRadius": 5,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#fff",
+                    "fontSize": 25,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "paddingVertical": 10,
+                  "textAlign": "center",
+                  "textTransform": "none",
+                }
+              }
+            >
+              dialog.info
+            </Text>
+            <View
+              style={
+                Object {
+                  "height": 30,
+                  "width": 30,
+                }
+              }
+            />
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "textTransform": "none",
+                },
+                Object {
+                  "paddingVertical": 15,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#fff",
+                },
+              ]
+            }
+          >
+            Message
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginBottom": 10,
+              }
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "black",
+                    "borderRadius": 20,
+                    "flexDirection": "row",
+                    "height": 45,
+                    "justifyContent": "center",
+                    "marginHorizontal": 5,
+                    "width": 80,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontWeight": "bold",
+                      "textTransform": "none",
+                    }
+                  }
+                  white={true}
+                >
+                  dialog.close
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <TouchableOpacity
+          activeOpacity={0.2}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "borderRadius": 20,
+                "flexDirection": "row",
+                "height": 45,
+                "justifyContent": "center",
+                "width": 200,
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Object {
+                  "color": "white",
+                  "fontWeight": "bold",
+                  "textTransform": "none",
+                }
+              }
+            >
+              Close
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/AlertContainer renders success alert successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={Object {}}
+      >
+        <View
+          style={
+            Array [
+              Object {},
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#1A2237",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#24DF98",
+                "borderTopLeftRadius": 5,
+                "borderTopRightRadius": 5,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#fff",
+                    "fontSize": 25,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "paddingVertical": 10,
+                  "textAlign": "center",
+                  "textTransform": "none",
+                }
+              }
+            >
+              dialog.success
+            </Text>
+            <View
+              style={
+                Object {
+                  "height": 30,
+                  "width": 30,
+                }
+              }
+            />
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "textTransform": "none",
+                },
+                Object {
+                  "paddingVertical": 15,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#fff",
+                },
+              ]
+            }
+          >
+            Message
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginBottom": 10,
+              }
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "black",
+                    "borderRadius": 20,
+                    "flexDirection": "row",
+                    "height": 45,
+                    "justifyContent": "center",
+                    "marginHorizontal": 5,
+                    "width": 80,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontWeight": "bold",
+                      "textTransform": "none",
+                    }
+                  }
+                  white={true}
+                >
+                  dialog.close
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <TouchableOpacity
+          activeOpacity={0.2}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "borderRadius": 20,
+                "flexDirection": "row",
+                "height": 45,
+                "justifyContent": "center",
+                "width": 200,
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Object {
+                  "color": "white",
+                  "fontWeight": "bold",
+                  "textTransform": "none",
+                }
+              }
+            >
+              Close
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/AlertContainer renders successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={Object {}}
+      >
+        <View
+          style={
+            Array [
+              Object {},
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#1A2237",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "borderTopLeftRadius": 5,
+                "borderTopRightRadius": 5,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#fff",
+                    "fontSize": 25,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "paddingVertical": 10,
+                  "textAlign": "center",
+                  "textTransform": "none",
+                }
+              }
+            >
+              Title
+            </Text>
+            <View
+              style={
+                Object {
+                  "height": 30,
+                  "width": 30,
+                }
+              }
+            />
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "textTransform": "none",
+                },
+                Object {
+                  "paddingVertical": 15,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#fff",
+                },
+              ]
+            }
+          >
+            Message
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginBottom": 10,
+              }
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "black",
+                    "borderRadius": 20,
+                    "flexDirection": "row",
+                    "height": 45,
+                    "justifyContent": "center",
+                    "marginHorizontal": 5,
+                    "width": 80,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontWeight": "bold",
+                      "textTransform": "none",
+                    }
+                  }
+                  white={true}
+                >
+                  dialog.close
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <TouchableOpacity
+          activeOpacity={0.2}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "borderRadius": 20,
+                "flexDirection": "row",
+                "height": 45,
+                "justifyContent": "center",
+                "width": 200,
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Object {
+                  "color": "white",
+                  "fontWeight": "bold",
+                  "textTransform": "none",
+                }
+              }
+            >
+              Close
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/AlertContainer renders successfully with its custom actions 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={Object {}}
+      >
+        <View
+          style={
+            Array [
+              Object {},
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#1A2237",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "borderTopLeftRadius": 5,
+                "borderTopRightRadius": 5,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#fff",
+                    "fontSize": 25,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "paddingVertical": 10,
+                  "textAlign": "center",
+                  "textTransform": "none",
+                }
+              }
+            >
+              Title
+            </Text>
+            <View
+              style={
+                Object {
+                  "height": 30,
+                  "width": 30,
+                }
+              }
+            />
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "textTransform": "none",
+                },
+                Object {
+                  "paddingVertical": 15,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#fff",
+                },
+              ]
+            }
+          >
+            Message
+          </Text>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "marginBottom": 10,
+              }
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "black",
+                    "borderRadius": 20,
+                    "flexDirection": "row",
+                    "height": 45,
+                    "justifyContent": "center",
+                    "marginHorizontal": 5,
+                    "width": 80,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontWeight": "bold",
+                      "textTransform": "none",
+                    }
+                  }
+                  white={true}
+                >
+                  customButton
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "black",
+                    "borderRadius": 20,
+                    "flexDirection": "row",
+                    "height": 45,
+                    "justifyContent": "center",
+                    "marginHorizontal": 5,
+                    "width": 80,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontWeight": "bold",
+                      "textTransform": "none",
+                    }
+                  }
+                  white={true}
+                >
+                  cancel
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <TouchableOpacity
+          activeOpacity={0.2}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "borderRadius": 20,
+                "flexDirection": "row",
+                "height": 45,
+                "justifyContent": "center",
+                "width": 200,
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Object {
+                  "color": "white",
+                  "fontWeight": "bold",
+                  "textTransform": "none",
+                }
+              }
+            >
+              Close
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/AlertContainer renders successfully with light theme 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={Object {}}
+      >
+        <View
+          style={
+            Array [
+              Object {},
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#fff",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "borderTopLeftRadius": 5,
+                "borderTopRightRadius": 5,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#fff",
+                    "fontSize": 25,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "paddingVertical": 10,
+                  "textAlign": "center",
+                  "textTransform": "none",
+                }
+              }
+            >
+              Title
+            </Text>
+            <View
+              style={
+                Object {
+                  "height": 30,
+                  "width": 30,
+                }
+              }
+            />
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "textTransform": "none",
+                },
+                Object {
+                  "paddingVertical": 15,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#222C44",
+                },
+              ]
+            }
+          >
+            Message
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginBottom": 10,
+              }
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "black",
+                    "borderRadius": 20,
+                    "flexDirection": "row",
+                    "height": 45,
+                    "justifyContent": "center",
+                    "marginHorizontal": 5,
+                    "width": 80,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontWeight": "bold",
+                      "textTransform": "none",
+                    }
+                  }
+                  white={true}
+                >
+                  dialog.close
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <TouchableOpacity
+          activeOpacity={0.2}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "borderRadius": 20,
+                "flexDirection": "row",
+                "height": 45,
+                "justifyContent": "center",
+                "width": 200,
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Object {
+                  "color": "white",
+                  "fontWeight": "bold",
+                  "textTransform": "none",
+                }
+              }
+            >
+              Close
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/AlertContainer renders warning alert successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={Object {}}
+      >
+        <View
+          style={
+            Array [
+              Object {},
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#1A2237",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#FDA929",
+                "borderTopLeftRadius": 5,
+                "borderTopRightRadius": 5,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 5,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#fff",
+                    "fontSize": 25,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "paddingVertical": 10,
+                  "textAlign": "center",
+                  "textTransform": "none",
+                }
+              }
+            >
+              dialog.warning
+            </Text>
+            <View
+              style={
+                Object {
+                  "height": 30,
+                  "width": 30,
+                }
+              }
+            />
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "textTransform": "none",
+                },
+                Object {
+                  "paddingVertical": 15,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#fff",
+                },
+              ]
+            }
+          >
+            Message
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginBottom": 10,
+              }
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "black",
+                    "borderRadius": 20,
+                    "flexDirection": "row",
+                    "height": 45,
+                    "justifyContent": "center",
+                    "marginHorizontal": 5,
+                    "width": 80,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontWeight": "bold",
+                      "textTransform": "none",
+                    }
+                  }
+                  white={true}
+                >
+                  dialog.close
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <TouchableOpacity
+          activeOpacity={0.2}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "black",
+                "borderRadius": 20,
+                "flexDirection": "row",
+                "height": 45,
+                "justifyContent": "center",
+                "width": 200,
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Object {
+                  "color": "white",
+                  "fontWeight": "bold",
+                  "textTransform": "none",
+                }
+              }
+            >
+              Close
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+  </View>
+</View>
+`;

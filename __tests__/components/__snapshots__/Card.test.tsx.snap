@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Card renders children successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "grey",
+          "elevation": 1,
+          "marginHorizontal": 20,
+          "marginVertical": 10,
+          "shadowColor": "#222C44",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.5,
+          "shadowRadius": 2,
+          "width": 710,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textTransform": "none",
+          }
+        }
+      >
+        Hello
+      </Text>
+      <TouchableOpacity
+        activeOpacity={0.2}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "black",
+              "borderRadius": 20,
+              "flexDirection": "row",
+              "height": 45,
+              "justifyContent": "center",
+              "width": 200,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+                "textTransform": "none",
+              }
+            }
+          >
+            button
+          </Text>
+        </View>
+      </TouchableOpacity>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/Card renders with primary color successfully 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      primary={true}
+      style={
+        Object {
+          "backgroundColor": "grey",
+          "elevation": 1,
+          "marginHorizontal": 20,
+          "marginVertical": 10,
+          "shadowColor": "#222C44",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.5,
+          "shadowRadius": 2,
+          "width": 710,
+        }
+      }
+    />
+  </View>
+</View>
+`;
