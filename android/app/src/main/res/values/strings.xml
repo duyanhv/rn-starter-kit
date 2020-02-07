@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RNSimplifyStarterKit</string>
+    <string name="CodePushDeploymentKey" moduleConfig="true" translatable="false">YOU_ANDROID_CODEPUSH_KEY</string>
 </resources>

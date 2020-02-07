@@ -1,14 +1,15 @@
-import { ScreenProps, sleep, getStatusHeight } from '@app/core';
+import { ScreenProps, sleep, getStatusHeight, screenNames } from '@app/core';
 import { useEffectOnce } from '@app/hooks';
 // import { navigationService } from '@app/services';
-import { ScrollView, Container, Text, Button, GuideModal } from '@app/components';
-import React, { useState } from 'react';
+import { ScrollView, Container, Text, Button } from '@app/components';
+import React from 'react';
 
-import * as Sentry from '@sentry/react-native';
+// import * as Sentry from '@sentry/react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import { mapDispatchToProps } from './map_dispatch_to_props';
 import { mapStateToProps } from './map_state_to_props';
 import { RematchSample } from './components/RematchSample';
+import { navigationService } from '../../../../services';
 
 type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps> & ScreenProps;
 
@@ -45,7 +46,6 @@ Props): JSX.Element => {
 	//       tabIndex: 1,
 	//     });
 	//   };
-	const [guideModalVisibility, setGuideModalVisibility] = useState(true);
 	const incrementSharkAsync = async (): Promise<void> => {
 		await sleep(500);
 		incrementShark(1);
@@ -65,45 +65,46 @@ Props): JSX.Element => {
 	};
 
 	return (
-		<Container componentId={componentId}>
-			<ScrollView
-				style={{
-					marginTop: -getStatusHeight(),
-					paddingTop: getStatusHeight(),
-				}}
-			>
-				<Text h1={true} style={propsDistance}>
-					Main
-				</Text>
-				<RematchSample
-					sharks={sharks}
-					dolphins={dolphins}
-					incrementShark={incrementShark1}
-					incrementSharkAsync={incrementSharkAsync}
-					incrementDolphin={incrementDolphin1}
-					incrementDolphinAsync={incrementDolphinAsync}
-				/>
-				<GuideModal
-					visible={guideModalVisibility}
-					setModalVisibility={setGuideModalVisibility}
-					// transparent={true}
-					animationType={'slide'}
-				/>
-				<Button style={propsDistance} onPress={() => setGuideModalVisibility(true)}>
-					<Text>Open Guide</Text>
-				</Button>
-				<Button style={propsDistance} onPress={() => Sentry.nativeCrash()}>
-					<Text>Crash Simulation</Text>
-				</Button>
-				<Button
-					style={propsDistance}
-					onPress={async () => {
-						await AsyncStorage.removeItem('persist:root');
+		<>
+			<Container componentId={componentId}>
+				<ScrollView
+					style={{
+						marginTop: -getStatusHeight(),
+						paddingTop: getStatusHeight(),
 					}}
 				>
-					<Text>Clear AsyncStorage</Text>
-				</Button>
-			</ScrollView>
-		</Container>
+					<Text h1={true} style={propsDistance}>
+						Main
+					</Text>
+					<RematchSample
+						sharks={sharks}
+						dolphins={dolphins}
+						incrementShark={incrementShark1}
+						incrementSharkAsync={incrementSharkAsync}
+						incrementDolphin={incrementDolphin1}
+						incrementDolphinAsync={incrementDolphinAsync}
+					/>
+					<Button
+						style={propsDistance}
+						onPress={() => {
+							navigationService.navigateTo({
+								componentId,
+								screenName: screenNames.GuideScreen,
+							});
+						}}
+					>
+						<Text>Open Guide</Text>
+					</Button>
+					<Button
+						style={propsDistance}
+						onPress={async () => {
+							await AsyncStorage.removeItem('persist:root');
+						}}
+					>
+						<Text>Clear AsyncStorage</Text>
+					</Button>
+				</ScrollView>
+			</Container>
+		</>
 	);
 };

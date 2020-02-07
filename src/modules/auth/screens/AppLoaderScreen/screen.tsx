@@ -16,7 +16,8 @@ export const Screen = ({ appLoaded, language, theme, changeTheme }: Props): JSX.
 		if (!appLoaded) {
 			return;
 		}
-
+		// console.log(language);
+		// console.log(NativeModules.I18nManager.localeIdentifier);
 		AsyncStorage.getItem('persist:root').then((value: string | null) => {
 			const localStorageState: RootState = JSON.parse(value ?? '');
 			const settings: SettingsStateType = JSON.parse((localStorageState.settings as unknown) as string);
@@ -27,7 +28,9 @@ export const Screen = ({ appLoaded, language, theme, changeTheme }: Props): JSX.
 		i18next.changeLanguage(language);
 		(async (): Promise<void> => {
 			navigationService.setRootHome();
-			SplashScreen.hide();
+			setTimeout(() => {
+				SplashScreen.hide();
+			}, 300);
 		})();
 	}, [appLoaded, language, theme, changeTheme]);
 	return <></>;

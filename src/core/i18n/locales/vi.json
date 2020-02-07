@@ -29,7 +29,9 @@
     "select": "Lựa chọn",
     "settings": "Cài đặt",
     "update": "Cập nhật",
-    "updateInstalled": "Bản cập nhật mới đã được tải. Vui lòng khởi động lại"
+	"updateInstalled": "Bản cập nhật mới đã được tải. Vui lòng khởi động lại",
+	"next": "Tiếp tục",
+	"skip": "Bỏ qua"
   },
   "dialog": {
     "close": "Đóng",

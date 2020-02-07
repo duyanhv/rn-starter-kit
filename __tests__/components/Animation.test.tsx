@@ -6,6 +6,6 @@ import { Animation } from '@app/components';
 describe('components/Animation', () => {
 	it('renders successfully', async () => {
 		const loading = jsonSources.loading();
-		render(<Animation source={loading} flex={true} width={100} height={100} autoPlay loop />);
+		render(<Animation source={loading} width={100} height={100} autoPlay loop />);
 	});
 });

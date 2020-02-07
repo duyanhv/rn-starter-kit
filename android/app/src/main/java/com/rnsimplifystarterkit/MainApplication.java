@@ -1,74 +1,61 @@
 package com.rnsimplifystarterkit;
 
 import android.app.Application;
-import android.content.Context;
+import android.util.Log;
+
+import com.codemotionapps.reactnativedarkmode.DarkModePackage;
 import com.facebook.react.PackageList;
+import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
+import com.facebook.react.bridge.JavaScriptExecutorFactory;
 import com.facebook.react.ReactApplication;
+import com.airbnb.android.react.lottie.LottiePackage;
+import com.microsoft.codepush.react.CodePush;
+import com.github.yamill.orientation.OrientationPackage;
+import com.beefe.picker.PickerViewPackage;
+import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
-import java.lang.reflect.InvocationTargetException;
+import com.reactnativenavigation.NavigationApplication;
+import com.reactnativenavigation.react.NavigationReactNativeHost;
+import com.reactnativenavigation.react.ReactGateway;
+
+import java.util.Arrays;
 import java.util.List;
+public class MainApplication extends NavigationApplication implements ReactApplication {
 
-public class MainApplication extends Application implements ReactApplication {
+	@Override
+	public boolean isDebug() {
+		return BuildConfig.DEBUG;
+	}
 
-  private final ReactNativeHost mReactNativeHost =
-      new ReactNativeHost(this) {
-        @Override
-        public boolean getUseDeveloperSupport() {
-          return BuildConfig.DEBUG;
-        }
+	@Override
+	protected ReactGateway createReactGateway() {
+		ReactNativeHost host = new NavigationReactNativeHost(this, isDebug(), createAdditionalReactPackages()) {
+			@javax.annotation.Nullable
+			@Override
+			protected String getJSBundleFile() {
+				return CodePush.getJSBundleFile();
+			}
 
-        @Override
-        protected List<ReactPackage> getPackages() {
-          @SuppressWarnings("UnnecessaryLocalVariable")
-          List<ReactPackage> packages = new PackageList(this).getPackages();
-          // Packages that cannot be autolinked yet can be added manually here, for example:
-          // packages.add(new MyReactNativePackage());
-          return packages;
-        }
+			@Override
+			protected String getJSMainModuleName() {
+				return "index";
+			}
+		};
+		return new ReactGateway(this, isDebug(), host);
+	}
 
-        @Override
-        protected String getJSMainModuleName() {
-          return "index";
-        }
-      };
-
-  @Override
-  public ReactNativeHost getReactNativeHost() {
-    return mReactNativeHost;
-  }
-
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    SoLoader.init(this, /* native exopackage */ false);
-    initializeFlipper(this); // Remove this line if you don't want Flipper enabled
-  }
-
-  /**
-   * Loads Flipper in React Native templates.
-   *
-   * @param context
-   */
-  private static void initializeFlipper(Context context) {
-    if (BuildConfig.DEBUG) {
-      try {
-        /*
-         We use reflection here to pick up the class that initializes Flipper,
-        since Flipper library is not available in release mode
-        */
-        Class<?> aClass = Class.forName("com.facebook.flipper.ReactNativeFlipper");
-        aClass.getMethod("initializeFlipper", Context.class).invoke(null, context);
-      } catch (ClassNotFoundException e) {
-        e.printStackTrace();
-      } catch (NoSuchMethodException e) {
-        e.printStackTrace();
-      } catch (IllegalAccessException e) {
-        e.printStackTrace();
-      } catch (InvocationTargetException e) {
-        e.printStackTrace();
-      }
-    }
-  }
+	@Override
+	public List<ReactPackage> createAdditionalReactPackages() {
+		return Arrays.<ReactPackage>asList(
+				// eg. new VectorIconsPackage()
+				new SplashScreenReactPackage(), new VectorIconsPackage(), new AsyncStoragePackage(),
+				new ReactNativeExceptionHandlerPackage(),
+				new PickerViewPackage(), new OrientationPackage(), new LottiePackage(),
+				new CodePush("", MainApplication.this, BuildConfig.DEBUG), new DarkModePackage());
+	}
 }

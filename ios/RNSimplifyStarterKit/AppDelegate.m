@@ -15,6 +15,7 @@
 #import <ReactNativeNavigation.h>
 #import "RNSplashScreen.h"
 #import "Orientation.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

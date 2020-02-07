@@ -29,7 +29,9 @@
     "select": "Select",
     "settings": "Settings",
     "update": "Update",
-    "updateInstalled": "A new update arrived. Please restart the app"
+    "updateInstalled": "A new update arrived. Please restart the app",
+	"next": "Next",
+	"skip": "Skip"
   },
   "dialog": {
     "close": "Close",

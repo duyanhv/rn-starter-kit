@@ -9,7 +9,6 @@ export interface Bluebird {
 }
 
 const showAndRecordError = (_error: Error, _isFatal: boolean = false): void => {
-	// console.log('Fucking Error', error);
 	// recordError(error);
 	Alert.show({
 		type: 'ERROR',
@@ -35,12 +34,10 @@ const showAndRecordError = (_error: Error, _isFatal: boolean = false): void => {
 
 export const handleGlobalErrors = (): void => {
 	setJSExceptionHandler((error: Error, isFatal: boolean) => {
-		// console.log(error, isFatal);
 		showAndRecordError(error, isFatal);
 	}, true);
 	setNativeExceptionHandler(
 		(errorString: string) => {
-			// console.log('Fuck2');
 			showAndRecordError(new Error(errorString), true);
 		},
 		false,
