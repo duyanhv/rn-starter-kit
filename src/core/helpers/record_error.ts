@@ -1,10 +1,10 @@
-import * as Sentry from '@sentry/react-native';
+// import * as Sentry from '@sentry/react-native';
 // import { config } from '@app/config';
 
 export const recordError = async (error: Error): Promise<void> => {
 	if (!__DEV__) {
 		try {
-			Sentry.captureException(error);
+			// Sentry.captureException(error);
 		} catch (internalError) {
 			// do nothing
 		}

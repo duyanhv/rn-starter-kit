@@ -1,6 +1,8 @@
 import React from 'react';
 import { Resource } from '@app/core';
 import LottieView from 'lottie-react-native';
+import { View } from 'native-base';
+import { styles } from './styles';
 
 interface Props {
 	width: number;
@@ -12,14 +14,22 @@ interface Props {
 
 export const Animation = (props: Props): JSX.Element => {
 	return (
-		<LottieView
-			source={props.source}
+		<View
 			style={{
 				width: props.width,
 				height: props.height,
 			}}
-			autoPlay={props.autoPlay === true}
-			loop={props.loop === true}
-		/>
+		>
+			<View style={styles.wrapper}>
+				<LottieView
+					source={props.source}
+					style={{
+						width: props.width,
+					}}
+					autoPlay={props.autoPlay === true}
+					loop={props.loop === true}
+				/>
+			</View>
+		</View>
 	);
 };

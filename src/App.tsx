@@ -77,7 +77,7 @@ const App = (): JSX.Element => {
 
 	return (
 		<Fragment>
-			<StatusBar barStyle='dark-content' />
+			<StatusBar />
 			<SafeAreaView>
 				<ScrollView contentInsetAdjustmentBehavior='automatic' style={styles.scrollView}>
 					<Header />

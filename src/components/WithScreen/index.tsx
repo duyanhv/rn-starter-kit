@@ -1,12 +1,6 @@
 import React, { Component, ReactNode } from 'react';
 import { Navigation } from 'react-native-navigation';
-import {
-	lockToPortrait,
-	lockToLandscape,
-	lockToLandscapeLeft,
-	lockToLandscapeRight,
-	unlockAllOrientations,
-} from 'react-native-orientation';
+import { lockToPortrait, lockToLandscape, lockToLandscapeLeft, lockToLandscapeRight } from 'react-native-orientation';
 
 interface State {
 	isAppeared: boolean;
@@ -45,7 +39,6 @@ export const WithScreen = (WrappedComponent: AppComponent, options?: Options): A
 				this.setState({
 					toggleRefresh: !this.state.toggleRefresh,
 				});
-
 			switch (options && options.orientation) {
 				case 'PORTRAIT':
 					lockToPortrait();
@@ -60,7 +53,8 @@ export const WithScreen = (WrappedComponent: AppComponent, options?: Options): A
 					lockToLandscapeRight();
 					break;
 				default:
-					unlockAllOrientations();
+					lockToPortrait();
+				// unlockAllOrientations();
 			}
 		}
 
