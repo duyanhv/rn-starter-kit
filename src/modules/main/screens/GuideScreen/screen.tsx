@@ -1,14 +1,14 @@
+/* eslint-disable no-null/no-null */
 import React, { useRef, useState } from 'react';
-import { ScrollView, Dimensions, TouchableOpacity } from 'react-native';
+import { ScrollView, Dimensions, TouchableOpacity, Animated, Easing } from 'react-native';
 import { View } from 'native-base';
 import { jsonSources, Guide, guideImages } from '@app/assets';
 import { navigationService } from '@app/services';
 import { Animation, Container, Text } from '@app/components';
-import { ScreenProps, screenNames, THEME_DARK } from '@app/core';
+import { ScreenProps, THEME_DARK } from '@app/core';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '@app/hooks';
+import { useTheme, useEffectOnce } from '@app/hooks';
 import { styles } from './styles';
-import { FadeInView } from './components';
 
 const { width } = Dimensions.get('window');
 
@@ -16,10 +16,52 @@ type Props = ScreenProps;
 export const Screen = (props: Props): JSX.Element => {
 	const { t } = useTranslation();
 	const { theme } = useTheme();
-	// eslint-disable-next-line no-null/no-null
 	const scrollRef = useRef<ScrollView>(null);
 	const animatedWidth = width - (width * 10) / 100;
 	const [screenIndex, setScreenIndex] = useState(1);
+
+	const [skipButtonFadeAnim] = useState(new Animated.Value(0));
+	const [skipButtonPositionAnim] = useState(new Animated.Value(0));
+	const skipButtonMarginLeftAnim = skipButtonPositionAnim.interpolate({
+		inputRange: [0, 1],
+		outputRange: [0, -15],
+	});
+
+	const [nextButtonFadeAnim] = useState(new Animated.Value(0));
+	const [nextButtonPositionAnim] = useState(new Animated.Value(0));
+	const nextButtonMarginLeftAnim = nextButtonPositionAnim.interpolate({
+		inputRange: [0, 1],
+		outputRange: [0, 15],
+	});
+
+	function initAnimation(isAnimationShow: boolean, fadeAnim: Animated.Value, positionAnim: Animated.Value): void {
+		fadeAnim.setValue(0);
+		positionAnim.setValue(0);
+		Animated.parallel([
+			Animated.timing(fadeAnim, {
+				toValue: isAnimationShow ? 1 : 0,
+				duration: 0,
+			}),
+		]).start();
+	}
+	function fadeAnimation(isAnimationShow: boolean, fadeAnim: Animated.Value, positionAnim: Animated.Value): void {
+		Animated.parallel([
+			Animated.timing(fadeAnim, {
+				toValue: isAnimationShow ? 0 : 1,
+				duration: 800,
+			}),
+			Animated.timing(positionAnim, {
+				toValue: isAnimationShow ? 1 : 0,
+				duration: 1000,
+				easing: Easing.linear,
+			}),
+		]).start();
+	}
+	useEffectOnce(() => {
+		initAnimation(true, skipButtonFadeAnim, skipButtonPositionAnim);
+		initAnimation(false, nextButtonFadeAnim, nextButtonPositionAnim);
+	});
+
 	function renderScreenIndex(currentIndex: number, totalIndex: number): JSX.Element {
 		const screenIndexes = [];
 		const activeDotColor = theme === THEME_DARK ? '#fff' : '#000';
@@ -55,7 +97,31 @@ export const Screen = (props: Props): JSX.Element => {
 					pagingEnabled
 					showsHorizontalScrollIndicator={false}
 					ref={scrollRef}
-					onScroll={(e) => setScreenIndex(Math.round(e.nativeEvent.contentOffset.x / animatedWidth) + 1)}
+					onScroll={(e) => {
+						const newScreenIndex = Math.round(e.nativeEvent.contentOffset.x / animatedWidth) + 1;
+						setScreenIndex(newScreenIndex);
+
+						if (
+							newScreenIndex !== screenIndex &&
+							(screenIndex >= jsonSources.guides().length - 1 ||
+								newScreenIndex >= jsonSources.guides().length - 1)
+						) {
+							fadeAnimation(
+								screenIndex === jsonSources.guides().length - 1 &&
+									newScreenIndex === jsonSources.guides().length,
+								skipButtonFadeAnim,
+								skipButtonPositionAnim,
+							);
+							fadeAnimation(
+								!(
+									screenIndex === jsonSources.guides().length - 1 &&
+									newScreenIndex === jsonSources.guides().length
+								),
+								nextButtonFadeAnim,
+								nextButtonPositionAnim,
+							);
+						}
+					}}
 					scrollEventThrottle={7}
 				>
 					{jsonSources.guides().map((guide: Guide, index: number) => (
@@ -118,12 +184,18 @@ export const Screen = (props: Props): JSX.Element => {
 										componentId: props.componentId,
 									})
 								}
+								disabled={jsonSources.guides().length === screenIndex}
 							>
-								<FadeInView useAnim={screenIndex === jsonSources.guides().length} directionAnim={'rtl'}>
+								<Animated.View
+									style={{
+										opacity: skipButtonFadeAnim,
+										marginLeft: skipButtonMarginLeftAnim,
+									}}
+								>
 									<Text h5 bold>
 										{t('common.skip')}
 									</Text>
-								</FadeInView>
+								</Animated.View>
 							</TouchableOpacity>
 							{renderScreenIndex(screenIndex, jsonSources.guides().length)}
 							<TouchableOpacity
@@ -137,21 +209,27 @@ export const Screen = (props: Props): JSX.Element => {
 											x: animatedWidth * screenIndex,
 										});
 									} else {
-										navigationService.navigateTo({
-											screenName: screenNames.NewScreen,
+										navigationService.goBack({
 											componentId: props.componentId,
 										});
 									}
 								}}
 							>
-								<FadeInView
-									useAnim={screenIndex === jsonSources.guides().length}
-									directionAnim={screenIndex === jsonSources.guides().length ? 'ltr' : 'rtl'}
+								{screenIndex < jsonSources.guides().length && (
+									<Text h5 bold style={styles.absoluteView}>
+										{'>'}
+									</Text>
+								)}
+								<Animated.View
+									style={{
+										opacity: nextButtonFadeAnim,
+										marginLeft: nextButtonMarginLeftAnim,
+									}}
 								>
 									<Text h5 bold>
-										{screenIndex < jsonSources.guides().length ? '>' : 'Done'}
+										{t('common.done')}
 									</Text>
-								</FadeInView>
+								</Animated.View>
 							</TouchableOpacity>
 						</View>
 					</View>

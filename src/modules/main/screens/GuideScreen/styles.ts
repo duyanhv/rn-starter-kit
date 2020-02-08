@@ -58,4 +58,7 @@ export const styles = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
+	absoluteView: {
+		position: 'absolute',
+	},
 });

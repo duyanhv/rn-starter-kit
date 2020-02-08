@@ -31,7 +31,8 @@
     "update": "Update",
     "updateInstalled": "A new update arrived. Please restart the app",
 	"next": "Next",
-	"skip": "Skip"
+	"skip": "Skip",
+	"done": "Done"
   },
   "dialog": {
     "close": "Close",
