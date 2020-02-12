@@ -15,5 +15,6 @@ export * from './helpers/get_primary_color';
 export * from './helpers/format_date';
 export * from './helpers/handle_global_errors';
 export * from './helpers/get_status_bar_height';
+export * from './helpers/get_width_height_by_percentages';
 
 export * from './screen_names';
