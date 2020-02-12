@@ -103,6 +103,17 @@ Props): JSX.Element => {
 					>
 						<Text>Clear AsyncStorage</Text>
 					</Button>
+					<Button
+						style={propsDistance}
+						onPress={() => {
+							navigationService.navigateTo({
+								componentId,
+								screenName: screenNames.ResideMenuScreen,
+							});
+						}}
+					>
+						<Text>Open Reside Menu</Text>
+					</Button>
 				</ScrollView>
 			</Container>
 		</>
