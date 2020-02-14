@@ -9,7 +9,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { mapDispatchToProps } from './map_dispatch_to_props';
 import { mapStateToProps } from './map_state_to_props';
 import { RematchSample } from './components/RematchSample';
-import { navigationService } from '../../../../services';
+import { navigationService, notificationService } from '../../../../services';
 
 type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps> & ScreenProps;
 
@@ -84,6 +84,15 @@ Props): JSX.Element => {
 						incrementDolphin={incrementDolphin1}
 						incrementDolphinAsync={incrementDolphinAsync}
 					/>
+
+					<Button
+						style={propsDistance}
+						onPress={() => {
+							notificationService.push();
+						}}
+					>
+						<Text>Push Noti</Text>
+					</Button>
 					<Button
 						style={propsDistance}
 						onPress={() => {

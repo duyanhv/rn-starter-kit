@@ -1,7 +1,7 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 use_frameworks! 
-inhibit_all_warnings!
+
 target 'RNSimplifyStarterKit' do
   # Pods for RNSimplifyStarterKit
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
@@ -34,15 +34,25 @@ target 'RNSimplifyStarterKit' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+ 
 
+  pre_install do |installer|
+	installer.pod_targets.each do |pod|
+	  if pod.name.start_with?('RNFB')
+		def pod.build_type;
+		  Pod::Target::BuildType.static_library
+		end
+	  end
+	end
+  end
+
+#inhibit_all_warnings!
+use_native_modules!
   target 'RNSimplifyStarterKitTests' do
     inherit! :search_paths
     # Pods for testing
   end
-#   use_frameworks!
-  use_native_modules!
 end
-
 target 'RNSimplifyStarterKit-tvOS' do
   # Pods for RNSimplifyStarterKit-tvOS
 
