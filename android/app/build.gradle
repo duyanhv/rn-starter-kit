@@ -1,5 +1,5 @@
 apply plugin: "com.android.application"
-
+apply plugin: 'com.google.gms.google-services'
 import com.android.build.OutputFile
 
 /**
@@ -130,10 +130,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.rnsimplifystarterkit"
+        applicationId "com.duyanhv.rnsimplifystarterkit"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         missingDimensionStrategy "RNN.reactNativeVersion", "reactNative60"
+ 		missingDimensionStrategy "RNNotifications.reactNativeVersion", "reactNative60"
         versionCode 3145801
         versionName "1.5.0"
         multiDexEnabled true
@@ -201,11 +202,12 @@ configurations.all {
 }
 
 dependencies {
-    implementation project(':react-native-navigation')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'com.android.support:design:25.4.0'
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
+	implementation project(':react-native-notifications')
+    implementation project(':react-native-navigation')
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";

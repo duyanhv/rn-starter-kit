@@ -1,4 +1,4 @@
-package com.rnsimplifystarterkit;
+package com.duyanhv.rnsimplifystarterkit;
 import com.reactnativenavigation.NavigationActivity;
 import android.os.Bundle;
 import org.devio.rn.splashscreen.SplashScreen;

@@ -2,8 +2,8 @@
 base="./src/assets/images/app_icon.png"
 noAlphaIcon="./src/assets/images/app_icon_no_alpha.png"
 roundIcon="./src/assets/images/app_icon_round.png"
-iosIconFolder="./ios/mobile/Images.xcassets/AppIcon.appiconset"
-iosSplashIconFolder="./ios/mobile/Images.xcassets/SplashIcon.imageset"
+iosIconFolder="./ios/RNSimplifyStarterKit/Images.xcassets/AppIcon.appiconset"
+iosSplashIconFolder="./ios/RNSimplifyStarterKit/Images.xcassets/SplashIcon.imageset"
 androidIconFolder="./android/app/src/main/res"
 roundIconRadius=512
 halfRadius=$(( roundIconRadius / 2 ))
@@ -77,4 +77,12 @@ androidRoundIconResolutions=(
 for (( i = 0; i < ${#androidRoundIconNames[@]}; ++i )); do
   convert "$roundIcon" -resize "${androidRoundIconResolutions[i]}x${androidRoundIconResolutions[i]}" -unsharp 1x4 "${androidIconFolder}/${androidRoundIconNames[i]}.png"
   echo "Wrote ${androidIconFolder}/${androidRoundIconNames[i]}.png"
+done
+
+androidNotiIconNames=(
+  'mipmap-hdpi/ic_notification' 'mipmap-ldpi/ic_notification' 'mipmap-mdpi/ic_notification' 'mipmap-xhdpi/ic_notification' 'mipmap-xxhdpi/ic_notification' 'mipmap-xxxhdpi/ic_notification' 
+)
+for (( i = 0; i < ${#androidNotiIconNames[@]}; ++i )); do
+  convert "$base" -resize "${androidIconResolutions[i]}x${androidIconResolutions[i]}" -unsharp 1x4 "${androidIconFolder}/${androidIconNames[i]}.png"
+  echo "Wrote ${androidIconFolder}/${androidNotiIconNames[i]}.png"
 done

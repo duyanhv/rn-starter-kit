@@ -58,3 +58,14 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+# credential files
+android/gradle.properties
+environments/production
+googlePlaySecretKey.json
+ios/**/GoogleService-Info.plist
+android/**/google-services.json
+ios/**/sentry.properties
+android/**/sentry.properties
+production.zip
+environments/
