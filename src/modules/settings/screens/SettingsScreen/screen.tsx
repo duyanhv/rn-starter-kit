@@ -27,6 +27,7 @@ export const Screen = ({
 	changeTheme,
 	theme,
 	currentUser,
+	componentId,
 }: //   logout,
 Props): JSX.Element => {
 	const { t } = useTranslation();
@@ -157,10 +158,7 @@ Props): JSX.Element => {
 	//   }
 
 	return (
-		<Container
-		// showHeader
-		// headerTitle={t('settingsScreen.settings')}
-		>
+		<Container componentId={componentId}>
 			<Text h1={true} style={propsDistance}>
 				Setting
 			</Text>
@@ -178,7 +176,7 @@ Props): JSX.Element => {
 				/>
 			)}
 			{!currentUser.avatarUrl && (
-				<Icon name='account-circle-outline' size={100} color={textColor} style={styles.iconAvatar} />
+				<Icon name='user-circle' size={100} color={textColor} style={styles.iconAvatar} />
 			)}
 			<Text bold style={styles.displayName}>
 				{currentUser.displayName}

@@ -2,6 +2,9 @@ package com.duyanhv.rnsimplifystarterkit;
 
 import android.app.Application;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
+
 import com.facebook.react.PackageList;
 import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
 import com.facebook.react.bridge.JavaScriptExecutorFactory;
@@ -14,52 +17,59 @@ import com.beefe.picker.PickerViewPackage;
 import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.oblador.vectoricons.VectorIconsPackage;
+
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
+
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
-import com.wix.reactnativenotifications.RNNotificationsPackage;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import com.facebook.react.PackageList;
+
 public class MainApplication extends NavigationApplication implements ReactApplication {
+    private final ReactNativeHost mReactNativeHost =
+            new NavigationReactNativeHost(this) {
+                @Override
+                protected String getJSMainModuleName() {
+                    return "index";
+                }
 
-	@Override
-	public boolean isDebug() {
-		return BuildConfig.DEBUG;
-	}
+                @Override
+                public boolean getUseDeveloperSupport() {
+                    return BuildConfig.DEBUG;
+                }
 
-	@Override
-	protected ReactGateway createReactGateway() {
-		ReactNativeHost host = new NavigationReactNativeHost(this, isDebug(), createAdditionalReactPackages()) {
-			@javax.annotation.Nullable
-			@Override
-			protected String getJSBundleFile() {
-				return CodePush.getJSBundleFile();
-			}
+                @Override
+                public List<ReactPackage> getPackages() {
+                    ArrayList<ReactPackage> packages = new PackageList(this).getPackages();
+                    return packages;
+                }
+            };
 
-			@Override
-			protected String getJSMainModuleName() {
-				return "index";
-			}
-		};
-		return new ReactGateway(this, isDebug(), host);
-	}
+    @Override
+    public ReactNativeHost getReactNativeHost() {
+        return mReactNativeHost;
+    }
 
-	@Override
-	public List<ReactPackage> createAdditionalReactPackages() {
-		return Arrays.<ReactPackage>asList(
-				new SplashScreenReactPackage(),
-				new VectorIconsPackage(),
-				new AsyncStoragePackage(),
-				new ReactNativeExceptionHandlerPackage(),
-				new PickerViewPackage(),
-				new OrientationPackage(),
-				new LottiePackage(),
-				new CodePush("", MainApplication.this, BuildConfig.DEBUG),
-				new DarkModePackage(),
-				new RNNotificationsPackage(MainApplication.this));
-	}
+//    @Nullable
+//    @Override
+//    public List<ReactPackage> createAdditionalReactPackages() {
+//        return Arrays.<ReactPackage>asList(
+//                new SplashScreenReactPackage(),
+//                new VectorIconsPackage(),
+//                new AsyncStoragePackage(),
+//                new ReactNativeExceptionHandlerPackage(),
+//                new PickerViewPackage(),
+//                new OrientationPackage(),
+//                new LottiePackage(),
+//                new CodePush("", MainApplication.this, BuildConfig.DEBUG),
+//                new DarkModePackage(),
+//                new RNNotificationsPackage(MainApplication.this),
+//                new MapsPackage());
+//    }
 }

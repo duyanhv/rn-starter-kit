@@ -15,9 +15,10 @@ export const Screen = (_props: Props): JSX.Element => {
 			sideBarBackgroundColor={colors.lightBlack}
 			mainViewBackGroundColor={colors.white}
 			mainViewBackGroundStyle={'light'}
-			mainViewChildren={renderMainViewChildren()}
 			sideBarChildren={renderMainViewChildren()}
 			infoViewChildren={renderMainViewChildren()}
-		/>
+		>
+			{renderMainViewChildren()}
+		</ResideMenu>
 	);
 };

@@ -1,3 +1,115 @@
 import { StyleSheet } from 'react-native';
+import { getWidthHeightByPercentages } from '@app/core';
 
-export const styles = StyleSheet.create({});
+export const styles = StyleSheet.create({
+	fullScreen: {
+		flex: 1,
+	},
+	flatListContent: {
+		paddingLeft: 15,
+	},
+	quickNavigationWrapper: {
+		flexDirection: 'row',
+		width: getWidthHeightByPercentages('width', 60),
+		height: getWidthHeightByPercentages('height', 6),
+		// justifyContent: 'space-between',
+		paddingLeft: 15,
+		paddingRight: 10,
+	},
+	quickNavigationButton: {
+		flex: 1,
+		borderRadius: 40,
+		// backgroundColor: '#88e1f2',
+		justifyContent: 'center',
+		alignItems: 'center',
+		marginRight: 15,
+		borderWidth: 1,
+	},
+	foodCategoryItemWrapper: {
+		justifyContent: 'center',
+		alignItems: 'center',
+		marginRight: 15,
+	},
+	foodCategoryItem: {
+		height: getWidthHeightByPercentages('width', 15),
+		// backgroundColor: '#88e1f2',
+		borderRadius: 40,
+		shadowOpacity: 0.1,
+		// shadowRadius: 9,
+		// shadowOffset: {
+		// 	height: 10,
+		// 	width: 0,
+		// },
+		// elevation: 15,
+		justifyContent: 'center',
+		alignItems: 'center',
+		flexDirection: 'row',
+		padding: 18,
+		borderWidth: 1,
+	},
+	foodCategoryIcon: {
+		width: getWidthHeightByPercentages('width', 10),
+		height: getWidthHeightByPercentages('width', 10),
+		marginRight: 10,
+	},
+	scrollViewSponsorItem: {
+		padding: 15,
+		height: getWidthHeightByPercentages('height', 69),
+	},
+	sponsorItemWrapper: {
+		height: getWidthHeightByPercentages('height', 40),
+		width: getWidthHeightByPercentages('width', 80),
+		borderRadius: 15,
+		// backgroundColor: '#beebe9',
+		marginRight: 15,
+		shadowOpacity: 0.2,
+		shadowRadius: 9,
+		shadowOffset: {
+			height: 10,
+			width: 0,
+		},
+		elevation: 25,
+		marginBottom: 10,
+		overflow: 'hidden',
+	},
+	// saveButton: {
+	// 	backgroundColor: 'rgba(232, 236, 241, 0.8)',
+	// 	// borderRadius: getWidthHeightByPercentages('width', 5),
+	// 	width: getWidthHeightByPercentages('width', 15),
+	// 	height: getWidthHeightByPercentages('width', 15),
+	// 	position: 'absolute',
+	// 	justifyContent: 'center',
+	// 	alignItems: 'center',
+	// 	right: 10,
+	// 	top: 10,
+	// 	zIndex: 1,
+	// },
+	// sponsorImageWrapper: {
+	// 	flex: 2,
+	// 	justifyContent: 'center',
+	// 	alignItems: 'center',
+	// 	// marginBottom: -1,
+	// },
+	// sponsorImage: {
+	// 	resizeMode: 'cover',
+	// 	position: 'absolute',
+	// 	top: 0,
+	// 	left: 0,
+	// 	bottom: 0,
+	// 	right: 0,
+	// },
+	// sponsorDescriptionImageBackground: {
+	// 	flex: 1,
+	// 	justifyContent: 'center',
+	// 	alignItems: 'center',
+	// 	padding: 10,
+	// },
+	// sponsorDescriptionText: {
+	// 	color: colors.lightGrey,
+	// 	textAlignVertical: 'center',
+	// 	textAlign: 'center',
+	// },
+	flatListDistributionCard: {
+		padding: 15,
+	},
+});

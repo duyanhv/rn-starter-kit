@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { store } from '@app/store';
-import { getPrimaryColor, colors, Theme, THEME_DARK } from '@app/core';
+import { getPrimaryColor, colors, Theme, THEME_DARK } from '../core';
+import { store } from '../store';
 
 interface CurrentTheme {
 	theme: Theme;
@@ -24,7 +24,7 @@ export const useTheme = (): CurrentTheme => {
 		setCurrentTheme({
 			theme: settings.theme,
 			primaryColor: primaryColorValue,
-			textColor: settings.theme === THEME_DARK ? colors.white : colors.black,
+			textColor: settings.theme === THEME_DARK ? colors.white : '#21243d',
 			screenBackgroundColor: settings.theme === THEME_DARK ? colors.lightBlack : colors.white,
 			componentBackgroundColor: settings.theme === THEME_DARK ? colors.black : colors.white,
 		});

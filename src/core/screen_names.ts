@@ -12,4 +12,5 @@ export const screenNames = {
 	NewScreen: 'NewScreen',
 	GuideScreen: 'GuideScreen',
 	ResideMenuScreen: 'ResideMenuScreen',
+	DetailScreen: 'DetailScreen',
 };

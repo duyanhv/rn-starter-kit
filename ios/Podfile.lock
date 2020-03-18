@@ -261,7 +261,9 @@ PODS:
     - React-cxxreact (= 0.61.5)
     - React-jsi (= 0.61.5)
   - React-jsinspector (0.61.5)
-  - react-native-notifications (3.1.1):
+  - react-native-maps (0.27.0):
+    - React
+  - react-native-notifications (3.1.2):
     - React
   - react-native-orientation (3.1.3):
     - React
@@ -306,16 +308,22 @@ PODS:
     - React
   - ReactNativeExceptionHandler (2.10.8):
     - React
-  - ReactNativeNavigation (4.8.4):
+  - ReactNativeNavigation (6.2.0):
     - React
-  - RNCAsyncStorage (1.7.1):
+    - React-RCTImage
+    - React-RCTText
+  - RNBackgroundFetch (3.0.3):
     - React
-  - RNFBAnalytics (6.3.2):
+  - RNCAsyncStorage (1.8.1):
+    - React
+  - RNFBAnalytics (6.3.4):
     - Firebase/Core (~> 6.13.0)
     - React
     - RNFBApp
-  - RNFBApp (6.3.2):
+  - RNFBApp (6.3.4):
     - Firebase/Core (~> 6.13.0)
+    - React
+  - RNReanimated (1.7.0):
     - React
   - RNVectorIcons (6.6.0):
     - React
@@ -329,6 +337,7 @@ DEPENDENCIES:
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - GoogleAppMeasurement (~> 6.1.6)
   - lottie-ios (from `../node_modules/lottie-ios`)
   - lottie-react-native (from `../node_modules/lottie-react-native`)
   - Picker (from `../node_modules/react-native-picker`)
@@ -343,6 +352,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-maps (from `../node_modules/react-native-maps`)
   - react-native-notifications (from `../node_modules/react-native-notifications`)
   - react-native-orientation (from `../node_modules/react-native-orientation`)
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
@@ -360,9 +370,11 @@ DEPENDENCIES:
   - ReactNativeDarkMode (from `../node_modules/react-native-dark-mode`)
   - ReactNativeExceptionHandler (from `../node_modules/react-native-exception-handler`)
   - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
+  - RNBackgroundFetch (from `../node_modules/react-native-background-fetch`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - "RNFBAnalytics (from `../node_modules/@react-native-firebase/analytics`)"
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -421,6 +433,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-maps:
+    :path: "../node_modules/react-native-maps"
   react-native-notifications:
     :path: "../node_modules/react-native-notifications"
   react-native-orientation:
@@ -453,12 +467,16 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-exception-handler"
   ReactNativeNavigation:
     :path: "../node_modules/react-native-navigation"
+  RNBackgroundFetch:
+    :path: "../node_modules/react-native-background-fetch"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
   RNFBAnalytics:
     :path: "../node_modules/@react-native-firebase/analytics"
   RNFBApp:
     :path: "../node_modules/@react-native-firebase/app"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   Yoga:
@@ -497,7 +515,8 @@ SPEC CHECKSUMS:
   React-jsi: cb2cd74d7ccf4cffb071a46833613edc79cdf8f7
   React-jsiexecutor: d5525f9ed5f782fdbacb64b9b01a43a9323d2386
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
-  react-native-notifications: acf37b8cbeb5b05f274b25ffe6289119b65961c2
+  react-native-maps: 6e1cf14d0aabefe59966da6dad7cb662251d3d83
+  react-native-notifications: f56a12d741eeb2fd4d7a418a4689111c50f7cd72
   react-native-orientation: f1caf84d65f1a4fd4511a18f2b924e634ad7a628
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
@@ -512,14 +531,16 @@ SPEC CHECKSUMS:
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   ReactNativeDarkMode: 0178ffca3b10f6a7c9f49d6f9810232b328fa949
   ReactNativeExceptionHandler: 8025d98049c25f186835a3af732dd7c9974d6dce
-  ReactNativeNavigation: 656ef429622d09e62e50ed162fb23936f95d1f03
-  RNCAsyncStorage: 44395cb9c7c1523104c2b499eb426ef7aff82bca
-  RNFBAnalytics: 0d4afe7f6fc4dd601f6b5df98f8226354dbc859f
-  RNFBApp: fc62d1e8adbc871fc7c27314c8e0842aebb44514
+  ReactNativeNavigation: 14cf9ef91075a86404c3c6336bc65105a34b946b
+  RNBackgroundFetch: 5180d1ec9c646ebcd3e13dd1a7ddcca093caa728
+  RNCAsyncStorage: e0dd7c8a36543b4ef84969acd9f8aceba3a92dc2
+  RNFBAnalytics: b8bad44e6653af73219b1a7af24bf3452cb02c1b
+  RNFBApp: 7d4006751de8bb5cafa2e8d2e7d94ee250df81db
+  RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: 6b521f900fc1e1d61491f2ab5bc12516c3c1eed8
+PODFILE CHECKSUM: 469548878b1acbfdce728bebca1bd565dae77250
 
 COCOAPODS: 1.8.4

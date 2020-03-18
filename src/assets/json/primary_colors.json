@@ -1,37 +1,42 @@
 [
-  {
-    "darkColor": "#e57373",
-    "lightColor": "#d32f2f",
-    "code": "red"
-  },
-  {
-    "darkColor": "#f06292",
-    "lightColor": "#c2185b",
-    "code": "pink"
-  },
-  {
-    "darkColor": "#ba68c8",
-    "lightColor": "#7b1fa2",
-    "code": "purple"
-  },
-  {
-    "darkColor": "#b39ddb",
-    "lightColor": "#512da8",
-    "code": "deepPurple"
-  },
-  {
-    "darkColor": "#9fa8da",
-    "lightColor": "#303f9f",
-    "code": "indigo"
-  },
-  {
-    "darkColor": "#90caf9",
-    "lightColor": "#1976d2",
-    "code": "blue"
-  },
-  {
-    "darkColor": "#81d4fa",
-    "lightColor": "#0288d1",
-    "code": "lightBlue"
-  }
+	{
+		"darkColor": "#ffb6b9",
+		"lightColor": "#d45079",
+		"code": "pastel-red"
+	},
+	{
+		"darkColor": "#e57373",
+		"lightColor": "#d32f2f",
+		"code": "red"
+	},
+	{
+		"darkColor": "#f06292",
+		"lightColor": "#c2185b",
+		"code": "pink"
+	},
+	{
+		"darkColor": "#ba68c8",
+		"lightColor": "#7b1fa2",
+		"code": "purple"
+	},
+	{
+		"darkColor": "#b39ddb",
+		"lightColor": "#512da8",
+		"code": "deepPurple"
+	},
+	{
+		"darkColor": "#9fa8da",
+		"lightColor": "#303f9f",
+		"code": "indigo"
+	},
+	{
+		"darkColor": "#90caf9",
+		"lightColor": "#1976d2",
+		"code": "blue"
+	},
+	{
+		"darkColor": "#81d4fa",
+		"lightColor": "#0288d1",
+		"code": "lightBlue"
+	}
 ]

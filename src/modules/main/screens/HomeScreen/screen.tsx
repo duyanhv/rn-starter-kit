@@ -1,31 +1,33 @@
-import { ScreenProps, sleep, getStatusHeight, screenNames } from '@app/core';
-import { useEffectOnce } from '@app/hooks';
+import {
+	ScreenProps,
+	getStatusHeight,
+	screenNames,
+	colors,
+	getWidthHeightByPercentages,
+	getPrimaryColor,
+} from '@app/core';
+import { useEffectOnce, useTheme } from '@app/hooks';
 // import { navigationService } from '@app/services';
-import { ScrollView, Container, Text, Button } from '@app/components';
+import { ScrollView, Container, Text, View, Icon } from '@app/components';
 import React from 'react';
-
-// import * as Sentry from '@sentry/react-native';
-import AsyncStorage from '@react-native-community/async-storage';
+import { TouchableOpacity, Image, FlatList } from 'react-native';
+import { imageSources, jsonSources } from '@app/assets';
+import { store } from '@app/store';
+import { navigationService } from '@app/services';
+import _ from 'lodash';
 import { mapDispatchToProps } from './map_dispatch_to_props';
 import { mapStateToProps } from './map_state_to_props';
-import { RematchSample } from './components/RematchSample';
-import { navigationService, notificationService } from '../../../../services';
+import { styles } from './styles';
+import { DistributionCard } from './components';
 
 type Props = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps> & ScreenProps;
 
 const propsDistance = {
 	margin: 15,
 };
-
-export const Screen = ({
-	componentId,
-	sharks,
-	dolphins,
-	incrementShark,
-	incrementDolphin,
-}: // shouldShownUpdateWarning,
+// shouldShownUpdateWarning,
 // updateShownUpdateWarning,
-Props): JSX.Element => {
+export const Screen = ({ componentId }: Props): JSX.Element => {
 	useEffectOnce(() => {
 		// if (shouldShownUpdateWarning) {
 		// 	appService.checkNeedUpdateNewBinaryVersion();
@@ -33,98 +35,219 @@ Props): JSX.Element => {
 		// }
 		// console.log(store.getState().settings);
 	});
-	//   const pushNewScreen = (): void => {
-	//     navigationService.navigateTo({
-	//       componentId,
-	//       screenName: screenNames.NewScreen,
-	//     });
-	//   };
 
-	//   const changeTab = (): void => {
-	//     navigationService.changeTab({
-	//       componentId,
-	//       tabIndex: 1,
-	//     });
-	//   };
-	const incrementSharkAsync = async (): Promise<void> => {
-		await sleep(500);
-		incrementShark(1);
-	};
-
-	const incrementDolphinAsync = async (): Promise<void> => {
-		await sleep(500);
-		incrementDolphin(1);
-	};
-
-	const incrementShark1 = (): void => {
-		incrementShark(1);
-	};
-
-	const incrementDolphin1 = (): void => {
-		incrementDolphin(1);
-	};
+	const { primaryColorCode, theme } = store.getState().settings;
+	const primaryColor = getPrimaryColor(primaryColorCode, theme);
+	const { textColor } = useTheme();
 
 	return (
-		<>
-			<Container componentId={componentId}>
-				<ScrollView
-					style={{
-						marginTop: -getStatusHeight(),
+		<Container componentId={componentId} flex={1}>
+			<ScrollView
+				style={[
+					{
 						paddingTop: getStatusHeight(),
+						...styles.fullScreen,
+					},
+				]}
+				showsVerticalScrollIndicator={false}
+			>
+				<Text style={propsDistance} h3>
+					Quick Navigation
+				</Text>
+				<View
+					style={{
+						...styles.quickNavigationWrapper,
 					}}
 				>
-					<Text h1={true} style={propsDistance}>
-						Main
-					</Text>
-					<RematchSample
-						sharks={sharks}
-						dolphins={dolphins}
-						incrementShark={incrementShark1}
-						incrementSharkAsync={incrementSharkAsync}
-						incrementDolphin={incrementDolphin1}
-						incrementDolphinAsync={incrementDolphinAsync}
-					/>
+					<TouchableOpacity
+						style={{
+							...styles.quickNavigationButton,
+							borderColor: textColor,
+						}}
+					>
+						<Icon name='search' color={textColor} size={getWidthHeightByPercentages('width', 6)} />
+					</TouchableOpacity>
+					<TouchableOpacity
+						style={{
+							...styles.quickNavigationButton,
+							borderColor: textColor,
+						}}
+						onPress={() => {
+							navigationService.navigateTo({
+								componentId,
+								screenName: screenNames.NewScreen,
+								options: {
+									statusBar: {
+										drawBehind: true,
+										visible: true,
+										backgroundColor: colors.transparent,
+									},
+									bottomTabs: {
+										visible: false,
+										animate: true,
+									},
+								},
+							});
+						}}
+					>
+						<Icon name='map' color={textColor} size={getWidthHeightByPercentages('width', 6)} />
+					</TouchableOpacity>
+				</View>
 
-					<Button
-						style={propsDistance}
-						onPress={() => {
-							notificationService.push();
+				<Text style={propsDistance} h3>
+					Anji
+				</Text>
+				{/* <View
+					style={{
+						width: getWidthHeightByPercentages('width', 92),
+						height: getWidthHeightByPercentages('height', 8),
+						borderWidth: 1,
+						borderColor: colors.lightGrey,
+						alignSelf: 'center',
+						borderRadius: 27,
+					}}
+				>
+					<View
+						style={{
+							flex: 1,
+							alignItems: 'center',
+							justifyContent: 'space-between',
+							flexDirection: 'row',
+							paddingLeft: 20,
 						}}
 					>
-						<Text>Push Noti</Text>
-					</Button>
-					<Button
-						style={propsDistance}
-						onPress={() => {
-							navigationService.navigateTo({
-								componentId,
-								screenName: screenNames.GuideScreen,
-							});
-						}}
-					>
-						<Text>Open Guide</Text>
-					</Button>
-					<Button
-						style={propsDistance}
-						onPress={async () => {
-							await AsyncStorage.removeItem('persist:root');
-						}}
-					>
-						<Text>Clear AsyncStorage</Text>
-					</Button>
-					<Button
-						style={propsDistance}
-						onPress={() => {
-							navigationService.navigateTo({
-								componentId,
-								screenName: screenNames.ResideMenuScreen,
-							});
-						}}
-					>
-						<Text>Open Reside Menu</Text>
-					</Button>
-				</ScrollView>
-			</Container>
-		</>
+						<Icon color={primaryColor} name={'search'} size={20} />
+						<TextInput
+							style={{
+								flex: 1,
+								marginLeft: 20,
+							}}
+							onChangeText={(text) => onChangeText(text)}
+							value={value}
+							placeholder={'Find a restaurent'}
+						/>
+					</View>
+				</View> */}
+
+				<FlatList
+					horizontal
+					data={imageSources.foods}
+					showsHorizontalScrollIndicator={false}
+					keyExtractor={(_item, index) => index.toString()}
+					contentContainerStyle={styles.flatListContent}
+					renderItem={({ item }) => (
+						<TouchableOpacity style={styles.foodCategoryItemWrapper} key={item.id}>
+							<View
+								style={{
+									...styles.foodCategoryItem,
+									shadowColor: primaryColor,
+									borderColor: textColor,
+								}}
+							>
+								<Image source={item.source()} style={styles.foodCategoryIcon} />
+								<Text bold>{item.title}</Text>
+							</View>
+						</TouchableOpacity>
+					)}
+				/>
+				<Text style={propsDistance} h3>
+					Distributions
+				</Text>
+				<FlatList
+					horizontal
+					data={jsonSources.testData.distribution().data}
+					showsHorizontalScrollIndicator={false}
+					keyExtractor={(_item, index) => index.toString()}
+					contentContainerStyle={styles.flatListContent}
+					renderItem={({ item, index }) => (
+						<DistributionCard
+							onPressItem={_.debounce(() => {
+								navigationService.showModal({
+									screenName: screenNames.DetailScreen,
+									passProps: {
+										data: item,
+									},
+									options: {
+										statusBar: {
+											backgroundColor: colors.transparent,
+										},
+									},
+								});
+							}, 140)}
+							key={index}
+							item={item}
+						/>
+					)}
+				/>
+
+				{/* <View
+					style={{
+						height: 300,
+						backgroundColor: colors.black,
+						width: 300,
+					}}
+				/> */}
+				{/* <Button
+					style={propsDistance}
+					onPress={() => {
+						navigationService.navigateTo({
+							componentId,
+							screenName: screenNames.NewScreen,
+							options: {
+								statusBar: {
+									drawBehind: true,
+									visible: true,
+									backgroundColor: colors.transparent,
+								},
+								bottomTabs: {
+									visible: false,
+									animate: true,
+								},
+							},
+						});
+					}}
+				>
+					<Text>Open Map</Text>
+				</Button>
+				<Button
+					style={propsDistance}
+					onPress={() => {
+						notificationService.push();
+					}}
+				>
+					<Text>Push Noti</Text>
+				</Button>
+				<Button
+					style={propsDistance}
+					onPress={() => {
+						navigationService.navigateTo({
+							componentId,
+							screenName: screenNames.GuideScreen,
+						});
+					}}
+				>
+					<Text>Open Guide</Text>
+				</Button>
+				<Button
+					style={propsDistance}
+					onPress={async () => {
+						await AsyncStorage.removeItem('persist:root');
+					}}
+				>
+					<Text>Clear AsyncStorage</Text>
+				</Button>
+				<Button
+					style={propsDistance}
+					onPress={() => {
+						navigationService.navigateTo({
+							componentId,
+							screenName: screenNames.ResideMenuScreen,
+						});
+					}}
+				>
+					<Text>Open Reside Menu</Text>
+				</Button> */}
+			</ScrollView>
+		</Container>
 	);
 };

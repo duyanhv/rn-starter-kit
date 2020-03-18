@@ -166,7 +166,7 @@ export const Screen = (props: Props): JSX.Element => {
 
 	return (
 		<>
-			<Container flex={1}>
+			<Container componentId={props.componentId} flex={1}>
 				<View style={styles.container}>
 					{renderAnimation()}
 					<View

@@ -55,21 +55,21 @@ export const AlertContainer = (props: AlertProps): JSX.Element => {
 				backgroundColor: colors.orange,
 			});
 			title = t('dialog.warning');
-			iconName = 'alert-circle-outline';
+			iconName = 'exclamation-circle';
 			break;
 		case 'ERROR':
 			titleContainerStyle = combineStyles<ViewStyle>(titleContainerStyle, {
 				backgroundColor: colors.red,
 			});
 			title = t('dialog.error');
-			iconName = 'alert-outline';
+			iconName = 'times-circle';
 			break;
 		case 'SUCCESS':
 			titleContainerStyle = combineStyles<ViewStyle>(titleContainerStyle, {
 				backgroundColor: colors.green,
 			});
 			title = t('dialog.success');
-			iconName = 'check';
+			iconName = 'check-circle';
 			break;
 		default:
 			break;
