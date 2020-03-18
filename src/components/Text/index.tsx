@@ -55,7 +55,7 @@ export const Text = (props: Props): JSX.Element => {
 
 	return (
 		<>
-			<NBText {...props} style={style}>
+			<NBText allowFontScaling={false} {...props} style={style}>
 				{props.children}
 			</NBText>
 		</>

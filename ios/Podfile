@@ -1,8 +1,12 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
-use_frameworks! 
 
 target 'RNSimplifyStarterKit' do
+#   use_frameworks! 
+#   use_modular_headers!
+  rn_path = '../node_modules/react-native'
+  rn_maps_path = '../node_modules/react-native-maps'
+
   # Pods for RNSimplifyStarterKit
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
@@ -34,25 +38,52 @@ target 'RNSimplifyStarterKit' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
- 
-
-  pre_install do |installer|
-	installer.pod_targets.each do |pod|
-	  if pod.name.start_with?('RNFB')
-		def pod.build_type;
-		  Pod::Target::BuildType.static_library
-		end
-	  end
-	end
-  end
-
+  pod 'GoogleAppMeasurement', '~> 6.1.6'
+  # react-native-maps dependencies
+  pod 'react-native-maps', path: rn_maps_path
+#   pod 'react-native-google-maps', path: rn_maps_path  # Uncomment this line if you want to support GoogleMaps on iOS
+#   pod 'GoogleMaps'  # Uncomment this line if you want to support GoogleMaps on iOS
+#   pod 'Google-Maps-iOS-Utils'
+  use_native_modules!
 #inhibit_all_warnings!
-use_native_modules!
   target 'RNSimplifyStarterKitTests' do
     inherit! :search_paths
     # Pods for testing
   end
 end
+
+pre_install do |installer|
+	Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+	end
+# pre_install do |installer|
+# 	installer.pod_targets.each do |pod|
+# 	  if pod.name.start_with?('RNFB')
+# 		def pod.build_type;
+# 		  Pod::Target::BuildType.static_library
+# 		end
+# 	  end
+# 	end
+# end
+post_install do |installer|
+	installer.pods_project.targets.each do |target|
+	targets_to_ignore = %w(React yoga)
+	  	if target.name == 'react-native-google-maps'
+			target.build_configurations.each do |config|
+		  	config.build_settings['CLANG_ENABLE_MODULES'] = 'No'
+		end
+	  	elsif ['RNFBApp', 'RNFBMessaging'].include?(target.name)
+			target.add_system_framework(installer.pods_project.targets.find{|target| target.name == 'GoogleUtilities'})
+		elsif target.name.eql?('RNFBAnalytics')
+			target.add_system_framework(installer.pods_project.targets.find{|target| target.name == 'FirebaseAnalytics'})
+			target.add_system_framework(installer.pods_project.targets.find{|target| target.name == 'GoogleAppMeasurement'})
+			target.add_system_framework(installer.pods_project.targets.find{|target| target.name == 'nanopb'})
+			target.add_system_framework(installer.pods_project.targets.find{|target| target.name == 'GoogleUtilities'})
+		elsif targets_to_ignore.include? target.name
+			target.remove_from_project
+		end
+	end
+end
+# end
 target 'RNSimplifyStarterKit-tvOS' do
   # Pods for RNSimplifyStarterKit-tvOS
 

@@ -9,7 +9,8 @@ import {
 } from 'react-native';
 import { colors, THEME_DARK, formatDate } from '@app/core';
 import { useTheme } from '@app/hooks';
-import { DatePicker, DateValue } from '@app/components';
+import { DatePicker, DateValue } from '../DatePicker';
+
 import { Tooltip } from '../Tooltip';
 import { View } from '../View';
 import { Text } from '../Text';

@@ -2,6 +2,9 @@ import { StyleSheet } from 'react-native';
 import { colors } from '@app/core';
 
 export const styles = StyleSheet.create({
+	fullScreen: {
+		flex: 1,
+	},
 	rootContainerBackground: {
 		flex: 0,
 	},

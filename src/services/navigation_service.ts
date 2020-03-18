@@ -1,4 +1,4 @@
-import { Navigation, LayoutTabsChildren } from 'react-native-navigation';
+import { Navigation, LayoutTabsChildren, Options } from 'react-native-navigation';
 import i18next from 'i18next';
 import { screenNames, Resource, THEME_DARK, colors, getPrimaryColor, THEME_LIGHT } from '@app/core';
 import { store } from '@app/store';
@@ -12,25 +12,66 @@ interface TabItem {
 	icon: Resource;
 	color?: string;
 	selectedColor?: string;
+	customOptions?: Options;
 }
 
 const navigateTo = _.debounce(
-	({ screenName, componentId }: { screenName: string; componentId: string; options?: {} }): void => {
+	({
+		screenName,
+		componentId,
+		options,
+		passProps,
+	}: {
+		screenName: string;
+		componentId: string;
+		options?: {};
+		passProps?: {};
+	}): void => {
 		Navigation.push(componentId, {
 			component: {
 				name: screenName,
 				options: {
 					bottomTabs: {
 						visible: false,
-						drawBehind: true,
-						animate: true,
 					},
+					...options,
 				},
+				passProps,
 			},
 		});
 	},
 	150,
 );
+
+const showModal = ({
+	screenName,
+	options,
+	passProps,
+}: {
+	screenName: string;
+	options?: Options;
+	passProps?: {};
+}): void => {
+	Navigation.showModal({
+		stack: {
+			children: [
+				{
+					component: {
+						name: screenName,
+						passProps,
+						options,
+					},
+				},
+			],
+		},
+	});
+};
+
+const navigateOptions = ({ componentId, options }: { componentId: string; options: Options }): void => {
+	Navigation.mergeOptions(componentId, {
+		...options,
+	});
+};
 
 const changeTab = ({ componentId, tabIndex }: { componentId: string; tabIndex: number }): void => {
 	Navigation.mergeOptions(componentId, {
@@ -45,22 +86,44 @@ const goBack = ({ componentId }: { componentId: string }): void => {
 };
 
 const setDefaultOptions = (): void => {
-	const { theme } = store.getState().settings;
+	const { primaryColorCode, theme } = store.getState().settings;
+
+	const primaryColor = getPrimaryColor(primaryColorCode, theme);
+	let tabColor = colors.lightBlack;
+	let tabTextColor = colors.grey;
+	if (theme === THEME_DARK) {
+		tabColor = colors.lightBlack;
+		tabTextColor = colors.white;
+	} else {
+		tabColor = colors.white;
+	}
 	Navigation.setDefaultOptions({
 		statusBar: {
-			backgroundColor: theme === THEME_DARK ? colors.lightBlack : colors.white,
 			style: theme === THEME_DARK ? THEME_LIGHT : THEME_DARK,
-			drawBehind: false,
+			drawBehind: true,
+			visible: true,
 		},
 		layout: {
-			componentBackgroundColor: theme === THEME_DARK ? colors.lightBlack : colors.white,
 			orientation: ['portrait'],
 			backgroundColor: theme === THEME_DARK ? colors.lightBlack : colors.white,
 		},
 		topBar: {
 			visible: false,
-			drawBehind: false,
 			height: 0,
+		},
+		bottomTabs: {
+			animate: true,
+			visible: true,
+			// translucent: true,
+			titleDisplayMode: 'alwaysShow',
+			backgroundColor: tabColor,
+		},
+		bottomTab: {
+			selectTabOnPress: true,
+			selectedIconColor: primaryColor,
+			selectedTextColor: primaryColor,
+			textColor: tabTextColor,
+			iconColor: tabTextColor,
 		},
 		animations:
 			Platform.OS === 'ios'
@@ -149,49 +212,42 @@ const getTabItem = ({ screenName, icon, color, text, selectedColor }: TabItem): 
 				textColor: color,
 				iconColor: color,
 			},
+			// bottomTabs: {
+			// 	visible: false,
+			// },
+			// ...customOptions,
 		},
 	},
 });
 
 const setRootHome = async (currentTabIndex?: number): Promise<void> => {
 	setDefaultOptions();
-	const homeIcon = await getIconImageSource('home', 30);
-	const moreIcon = await getIconImageSource('dots-horizontal', 30);
-	const { primaryColorCode, theme } = store.getState().settings;
-	const primaryColor = getPrimaryColor(primaryColorCode, theme);
-	let tabColor = colors.lightGrey;
-	let tabTextColor = colors.grey;
-	if (theme === THEME_DARK) {
-		tabColor = colors.black;
-		tabTextColor = colors.white;
-	} else {
-		tabColor = colors.white;
-	}
+	const menuIcon = await getIconImageSource('hamburger', 30);
+	const moreIcon = await getIconImageSource('cog', 30);
+	const mapIcon = await getIconImageSource('compass', 30);
 	Navigation.setRoot({
 		root: {
 			bottomTabs: {
 				options: {
 					bottomTabs: {
 						currentTabIndex: currentTabIndex || 0,
-						titleDisplayMode: 'alwaysShow',
-						backgroundColor: tabColor,
-						animate: true,
 					},
 				},
 				children: [
 					getTabItem({
 						screenName: screenNames.HomeScreen,
-						icon: homeIcon,
+						icon: menuIcon,
+						text: i18next.t('common.menu'),
+					}),
+					getTabItem({
+						screenName: screenNames.NewScreen,
+						icon: mapIcon,
 						text: i18next.t('common.home'),
-						color: tabTextColor,
-						selectedColor: primaryColor,
 					}),
 					getTabItem({
 						screenName: screenNames.SettingsScreen,
 						icon: moreIcon,
 						text: i18next.t('common.settings'),
-						color: tabTextColor,
-						selectedColor: primaryColor,
 					}),
 				],
 			},
@@ -203,6 +259,9 @@ const initialize = (): void => {
 	Navigation.events().registerAppLaunchedListener((): void => {
 		setRootAppLoader();
 	});
+	// Navigation.events().registerBottomTabPressedListener(({ tabIndex, componentId }) => {
+	// 	// console.log(tabIndex);
+	// });
 };
 
 export const navigationService = {
@@ -216,4 +275,6 @@ export const navigationService = {
 	changeTab,
 	setDefaultOptions,
 	setGuide,
+	navigateOptions,
+	showModal,
 };

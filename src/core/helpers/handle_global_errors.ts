@@ -1,7 +1,7 @@
 import { setJSExceptionHandler, setNativeExceptionHandler } from 'react-native-exception-handler';
 import i18next from 'i18next';
 import Promise from 'bluebird';
-import { Alert } from '@app/components';
+import { Alert } from '../../components';
 // import { recordError } from '@app/core';
 
 export interface Bluebird {
@@ -9,7 +9,7 @@ export interface Bluebird {
 }
 
 const showAndRecordError = (_error: Error, _isFatal: boolean = false): void => {
-	// recordError(error);
+	// console.log(_error);
 	Alert.show({
 		type: 'ERROR',
 		title: i18next.t('error.unexpectedErrorOccurred'),

@@ -3,11 +3,12 @@ import { getWidthHeightByPercentages, colors } from '@app/core';
 
 export const styles = StyleSheet.create({
 	container: {
-		flex: 1,
+		...StyleSheet.absoluteFillObject,
 	},
 	menuButton: {
 		position: 'absolute',
-		margin: getWidthHeightByPercentages('height', 4),
+		marginTop: getWidthHeightByPercentages('height', 6),
+		marginLeft: getWidthHeightByPercentages('height', 2),
 		zIndex: 2,
 	},
 	sideBar: {

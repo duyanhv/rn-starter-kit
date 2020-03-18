@@ -12,6 +12,7 @@ interface Props extends ViewProps {
 	rowReverse?: boolean;
 	columnReverse?: boolean;
 	children?: React.ReactNode;
+	// ref?: LegacyRef<RNVIew>;
 }
 
 export const View = (props: Props): JSX.Element => {

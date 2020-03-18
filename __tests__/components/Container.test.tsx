@@ -14,13 +14,13 @@ describe('components/Container', () => {
 	});
 
 	it('renders successfully', async () => {
-		const { baseElement } = render(<Container />);
+		const { baseElement } = render(<Container componentId={'1'} />);
 
 		expect(baseElement).toMatchSnapshot();
 	});
 
 	it('renders successfully with its header', async () => {
-		const { baseElement, getByText } = render(<Container showHeader headerTitle={headerTitle} />);
+		const { baseElement, getByText } = render(<Container componentId={'1'} showHeader headerTitle={headerTitle} />);
 
 		expect(getByText(headerTitle)).toBeDefined();
 		expect(baseElement).toMatchSnapshot();

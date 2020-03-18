@@ -14,7 +14,8 @@
     "lightBlue": "Xanh da trời nhạt",
     "pink": "Hồng",
     "purple": "Tím",
-    "red": "Đỏ"
+	"red": "Đỏ",
+	"pastel-red": "Đỏ Pastel"
   },
   "common": {
     "cancel": "Huỷ",
@@ -32,7 +33,8 @@
 	"updateInstalled": "Bản cập nhật mới đã được tải. Vui lòng khởi động lại",
 	"next": "Tiếp tục",
 	"skip": "Bỏ qua",
-	"done": "Xong"
+	"done": "Xong",
+	"menu": "Thực đơn"
   },
   "dialog": {
     "close": "Đóng",

@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
-import { combineStyles } from '@app/core';
-import { useTheme } from '@app/hooks';
 import { ViewProps, ViewStyle } from 'react-native';
-import { Touchable } from '@app/components/Touchable';
+import { useTheme } from '../../hooks';
+import { combineStyles } from '../../core/helpers/combine_styles';
+import { Touchable } from '../Touchable';
 import { styles } from './styles';
 
 interface Props extends ViewProps {

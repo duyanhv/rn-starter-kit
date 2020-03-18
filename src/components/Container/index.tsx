@@ -2,18 +2,18 @@ import React, { ReactNode } from 'react';
 import { navigationService } from '@app/services';
 import { colors, THEME_DARK, THEME_LIGHT } from '@app/core';
 import { useTheme } from '@app/hooks';
-import { StatusBar, SafeAreaView, StatusBarStyle, Platform } from 'react-native';
+import { StatusBar, SafeAreaView, StatusBarStyle, Platform, StyleSheet, View } from 'react-native';
 import { Button } from '../Button';
 import { Left } from '../Left';
 import { Body } from '../Body';
 import { Right } from '../Right';
-import { View } from '../View';
+// import { View } from '../View';
 import { styles } from './styles';
 import { Icon } from '../Icon';
 import { Text } from '../Text';
 
 interface Props {
-	componentId?: string;
+	componentId: string;
 	showHeader?: boolean;
 	showBackButton?: boolean;
 	headerTitle?: string;
@@ -26,6 +26,7 @@ interface Props {
 	rowReverse?: boolean;
 	columnReverse?: boolean;
 }
+
 export const Container = (props: Props): JSX.Element => {
 	const { primaryColor, screenBackgroundColor, theme } = useTheme();
 	const goBack = (): void => {
@@ -34,10 +35,21 @@ export const Container = (props: Props): JSX.Element => {
 				componentId: props.componentId,
 			});
 	};
+	navigationService.navigateOptions({
+		componentId: props.componentId,
+		options: {
+			statusBar: {
+				drawBehind: true,
+				visible: true,
+				backgroundColor: colors.transparent,
+			},
+		},
+	});
 	return (
 		<>
 			{Platform.OS === 'ios' && (
 				<StatusBar
+					animated={true}
 					backgroundColor={colors.transparent}
 					barStyle={`${theme === THEME_DARK ? THEME_LIGHT : THEME_DARK}-content` as StatusBarStyle}
 				/>
@@ -45,9 +57,9 @@ export const Container = (props: Props): JSX.Element => {
 			<SafeAreaView
 				style={[
 					styles.rootContainer,
-					{
-						backgroundColor: screenBackgroundColor,
-					},
+					// {
+					// 	backgroundColor: screenBackgroundColor,
+					// },
 				]}
 			>
 				{props.showHeader && (
@@ -75,18 +87,48 @@ export const Container = (props: Props): JSX.Element => {
 					</View>
 				)}
 				<View
-					flex={props.flex}
-					column={props.column}
-					row={props.row}
-					columnReverse={props.columnReverse}
-					rowReverse={props.rowReverse}
-					center={props.center}
-					centerVertical={props.centerVertical}
 					style={{
-						backgroundColor: screenBackgroundColor,
+						...StyleSheet.absoluteFillObject,
+						// backgroundColor: '#000',
+						// flex: 1,
 					}}
 				>
-					{props.children}
+					<View
+						// flex={props.flex}
+						// column={props.column}
+						// row={props.row}
+						// columnReverse={props.columnReverse}
+						// rowReverse={props.rowReverse}
+						// center={props.center}
+						// centerVertical={props.centerVertical}
+						style={{
+							backgroundColor: screenBackgroundColor,
+							...styles.fullScreen,
+						}}
+					>
+						{props.children}
+					</View>
+					{/* <View
+						style={{
+							// ...StyleSheet.absoluteFillObject,
+							// marginTop: getStatusHeight() + 100,
+							// zIndex: 2,
+							backgroundColor: '#000',
+						}}
+						// ref={mainViewRef}
+					/> */}
+					{/* <BlurView
+						style={{
+							position: 'absolute',
+							top: 0,
+							left: 0,
+							bottom: 0,
+							right: 0,
+						}}
+						// viewRef={blurViewRef}
+						blurType='light'
+						blurAmount={10}
+					/> */}
 				</View>
 			</SafeAreaView>
 		</>

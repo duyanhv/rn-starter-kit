@@ -5,7 +5,7 @@ import SplashScreen from 'react-native-splash-screen';
 import { navigationService } from '@app/services';
 import { initialMode } from 'react-native-dark-mode';
 import { AsyncStorage } from 'react-native';
-import { RootState, SettingsStateType } from '@app/store';
+// import { RootState, SettingsStateType } from '@app/store';
 import { mapStateToProps } from './map_state_to_props';
 import { mapDispatchToProps } from './map_dispatch_to_props';
 
@@ -16,14 +16,13 @@ export const Screen = ({ appLoaded, language, theme, changeTheme }: Props): JSX.
 		if (!appLoaded) {
 			return;
 		}
-		// console.log(language);
-		// console.log(NativeModules.I18nManager.localeIdentifier);
-		AsyncStorage.getItem('persist:root').then((value: string | null) => {
-			const localStorageState: RootState = JSON.parse(value ?? '');
-			const settings: SettingsStateType = JSON.parse((localStorageState.settings as unknown) as string);
-			if (!!settings && settings.theme !== undefined && settings.theme.trim() === '') {
-				changeTheme(initialMode);
-			}
+		changeTheme(initialMode);
+
+		AsyncStorage.getItem('persist:root').then((_value: string | null) => {
+			// const localStorageState: RootState = JSON.parse(value ?? '');
+			// const settings: SettingsStateType = JSON.parse((localStorageState.settings as unknown) as string);
+			// if (!!settings && settings.theme !== undefined && settings.theme.trim() === '') {
+			// }
 		});
 		i18next.changeLanguage(language);
 		(async (): Promise<void> => {
